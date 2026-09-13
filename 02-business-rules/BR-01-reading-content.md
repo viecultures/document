@@ -19,11 +19,21 @@ Quy định cấu trúc dữ liệu, quy tắc lưu trữ, xuất dữ liệu v�
 - **Quy tắc 1.2.2**: Đơn vị âm thanh AI phải hỗ trợ cơ chế phát toàn bài đọc và đồng bộ mốc thời gian (Timestamp Syncing) theo từng đoạn/câu để người dùng thực hiện phương pháp **Shadowing** (vừa nghe vừa nhại lại).
 - **Quy tắc 1.2.3**: Trình phát âm thanh (Audio Player) phải cung cấp tùy chọn điều chỉnh tốc độ phát (0.75x - Tự nhiên chậm, 1.0x - Chuẩn, 1.25x - Nhanh) để phù hợp với nhiều trình độ người học.
 
+### BR-01.3: Quy Tắc Nghiệp Vụ Dictation (Nghe Chép Chính Tả Từng Câu)
+- **Quy tắc 1.3.1**: Mọi câu trong bài đọc tiếng Anh bắt buộc phải được gắn mốc thời gian bắt đầu (`audio_start`) và kết thúc (`audio_end`) tính bằng giây.
+- **Quy tắc 1.3.2**: Trình phát Dictation (Dictation Snippet Player) chỉ phát âm thanh trong phạm vi mốc thời gian của câu hiện tại và hỗ trợ lặp tự động (Loop) hoặc lặp thủ công bằng phím tắt.
+- **Quy tắc 1.3.3**: Hệ thống phải hỗ trợ cơ chế so sánh ký tự/từ thời gian thực (Real-time Word Matching):
+  - Từ gõ đúng: Hiển thị màu xanh lá (Green).
+  - Từ gõ sai: Đổi màu/Gạch chân cam trong ô nhập dữ liệu.
+  - Từ chưa gõ: Che bởi ký tự đại diện (`*`).
+- **Quy tắc 1.3.4**: Bắt buộc cung cấp các tùy chọn giao diện: `Show answer immediately` (So sánh thời gian thực), `Show full answer` (Hiện toàn bộ đáp án khi tắc), nút `Skip` (Bỏ qua câu), và nút Micro (Nhập liệu bằng giọng nói qua Web Speech API).
+
 ---
 
 ## 3. Trải Nghiệm Giao Diện Đề Xuất (UI/UX Guidelines)
 
 ```
+SHADOWING MODE:
 +-----------------------------------------------------------------------+
 | 🎧 Player Audio AI: [ ▶ Play ] [ ⏩ 0.75x / 1.0x ] [ 01:25 / 03:40 ]  |
 +-----------------------------------------------------------------------+
@@ -32,6 +42,19 @@ Quy định cấu trúc dữ liệu, quy tắc lưu trữ, xuất dữ liệu v�
 |                                                                       |
 | 🇻🇳 Đoạn 1 (VI - Phụ trợ/Ẩn/Hiện):                                    |
 | "Quần thể Di tích Cố đô Huế là Di sản Thế giới được UNESCO..."         |
++-----------------------------------------------------------------------+
+
+DICTATION MODE (Mô phỏng DailyDictation):
++-----------------------------------------------------------------------+
+| [ Dictation ]   [ Full Transcript ]                 < 4 / 12 >        |
+| [ ▶ Play 0:01/0:01 ] ----------------------------- [🔊] [ 1x ▾ ]      |
++-----------------------------------------------------------------------+
+| I am cook dinner.                                                     |
+|       ~~~~ (Orange Underline)                             [🎙️] [Skip] |
++-----------------------------------------------------------------------+
+| ⚠️ Incorrect                                                          |
+| I am cooking *******                                                  |
+| [x] Show answer immediately     [ ] Show full answer                  |
 +-----------------------------------------------------------------------+
 ```
 

@@ -19,15 +19,27 @@ Mỗi Flashcard đại diện cho một thực thể `VocabItem` và bắt buộ
   - Hiển thị: Phiên âm IPA (ví dụ: */ˌɑːrkɪˈtektʃərəl/*), Từ loại (ví dụ: *adj.*), Nghĩa tiếng Việt (ví dụ: *thuộc kiến trúc*).
   - Đính kèm: **Nút phát âm thanh AI** (`audio_url`) chuẩn bản xứ.
 
-### BR-04.2: Quy Trình Ôn Tập & Đánh Giá Nhị Phân (Binary Self-Assessment Rules)
-- **Quy tắc 4.2.1**: Sau khi lật sang Mặt 2 (Mặt Giải Nghĩa), hệ thống yêu cầu người dùng tự đo lường mức độ ghi nhớ thông qua **nút đánh giá nhị phân duy nhất với 2 giá trị**:
-  1. 🟢 **"Đã nhớ" (Mastered)**
-  2. 🔴 **"Cần ôn lại" (Needs Review)**
-- **Quy tắc 4.2.2**: Cấm sử dụng hệ thống đánh giá 4-5 cấp độ phức tạp (như *Again / Hard / Good / Easy* của Anki) nhằm giữ trải nghiệm học tập đơn giản, không gây mệt mỏi nhận thức (cognitive fatigue).
+### BR-04.2: Chiến Lược Ôn Tập 2 Giai Đoạn (2-Phase Flashcard Strategy)
 
-### BR-04.3: Cập Nhật Trạng Thái & Tiến Độ (Progress Tracking & Queue Logic)
-- **Quy tắc 4.3.1**: Khi chọn 🟢 **"Đã nhớ"**: Từ vựng được tăng điểm ghi nhớ, đánh dấu trạng thái *Mastered* cho bài học đó và giảm tần suất lặp lại.
-- **Quy tắc 4.3.2**: Khi chọn 🔴 **"Cần ôn lại"**: Từ vựng sẽ giữ nguyên trạng thái *Learning*, tự động chèn lại vào cuối hàng chờ ôn tập (Review Queue) của phiên học hiện tại để người dùng luyện tập lại ngay.
+Hệ thống ôn tập từ vựng được lộ trình hóa theo 2 giai đoạn phát triển:
+
+- **Giai đoạn 1: Đánh Giá Nhị Phân Đơn Giản (Binary Self-Assessment)**
+  - Người dùng tự đo lường mức độ ghi nhớ sau khi lật sang Mặt 2 thông qua **2 nút đánh giá nhị phân duy nhất**:
+    1. 🔴 **"Cần ôn lại" (Needs Review)**: Đánh dấu từ ở trạng thái `learning`, tự động chèn lại vào cuối hàng chờ phiên học.
+    2. 🟢 **"Đã nhớ" (Mastered)**: Đánh dấu từ ở trạng thái `mastered`, tăng điểm ghi nhớ bài học.
+  - Mục đích: Giữ trải nghiệm đơn giản, không gây mệt mỏi nhận thức (cognitive fatigue).
+
+- **Giai đoạn 2: Thuật Toán Spaced Repetition Chuẩn Anki (SuperMemo-2 / SM-2)**
+  - Nâng cấp giao diện lật mặt sau với **4 mức độ tự đánh giá chuẩn Anki/SuperMemo-2**:
+    1. 🔴 **Again (1 ngày)**: Quên hoàn toàn từ vựng.
+    2. 🟠 **Hard (Khoảng cách ngắn)**: Nhớ ngập ngừng, tốn nhiều thời gian.
+    3. 🔵 **Good (Khoảng cách tiêu chuẩn)**: Nhớ tốt sau vài giây suy nghĩ.
+    4. 🟢 **Easy (Khoảng cách dài)**: Nhớ ngay lập tức mà không cần suy nghĩ.
+  - **Thuật toán SM-2 tự động tính toán**:
+    - `interval`: Khoảng cách số ngày lặp lại lần kế tiếp.
+    - `repetitions`: Số lần lặp lại thành công liên tiếp.
+    - `ease_factor`: Hệ số độ dễ của từ vựng (mặc định 2.5, điều chỉnh theo từng phản hồi).
+    - `next_review_at`: Ngày chính xác người dùng cần mở app ôn lại thẻ này.
 
 ---
 
@@ -45,14 +57,23 @@ FRONT SIDE (Mặt Trước):
 |                     [ 🔄 Lật mặt ]                    |
 +-------------------------------------------------------+
 
-BACK SIDE (Mặt Sau):
+BACK SIDE - GIAI ĐOẠN 1 (Binary Assessment):
 +-------------------------------------------------------+
 |  /ˌɑːrkɪˈtektʃərəl/             [ 🔊 Nghe âm thanh ]  |
 |  Nghĩa: Thuộc kiến trúc                               |
-|                                                       |
 |  ---------------------------------------------------  |
 |  Tự đánh giá ghi nhớ:                                 |
 |     [ 🔴 Cần ôn lại ]          [ 🟢 Đã nhớ ]          |
++-------------------------------------------------------+
+
+BACK SIDE - GIAI ĐOẠN 2 (Anki SM-2 Spaced Repetition):
++-------------------------------------------------------+
+|  /ˌɑːrkɪˈtektʃərəl/             [ 🔊 Nghe âm thanh ]  |
+|  Nghĩa: Thuộc kiến trúc                               |
+|  ---------------------------------------------------  |
+|  Chọn mức độ ghi nhớ (SM-2 Algorithm):                |
+|  [ 🔴 Again ]  [ 🟠 Hard ]  [ 🔵 Good ]  [ 🟢 Easy ]  |
+|   (1 ngày)      (3 ngày)     (6 ngày)     (12 ngày)   |
 +-------------------------------------------------------+
 ```
 
@@ -60,6 +81,9 @@ BACK SIDE (Mặt Sau):
 
 ## 4. Tác Động Đến Các Bộ Phận (Cross-Functional Impact)
 
-- 🎨 **UI/UX Designer**: Thiết kế hiệu ứng lật thẻ (Flip Animation) mượt mà trên Mobile Web App. Nút *Cần ôn lại* và *Đã nhớ* bố trí to, rõ ràng ở vùng chạm ngón tay cái (Thumb Zone).
-- ⚙️ **Backend Dev**: Xây dựng bảng lưu trữ tiến độ `UserVocabProgress` với trạng thái `status: 'learning' | 'mastered'` và `last_reviewed_at`.
-- 📊 **Business / Marketing**: Đưa thông điệp "Học từ vựng theo ngữ cảnh đơn giản với 1 click tự đánh giá" vào các chiến dịch truyền thông.
+- 🎨 **UI/UX Designer**: Thiết kế giao diện lật thẻ (Flip Animation) mượt mà. Đảm bảo hỗ trợ cả 2 nút Binary (Giai đoạn 1) và nâng cấp responsive lên 4 nút SM-2 (Giai đoạn 2).
+- ⚙️ **Backend Dev**:
+  - Giai đoạn 1: Quản lý bảng `UserVocabProgress` với `status: 'learning' | 'mastered'`.
+  - Giai đoạn 2: Bổ sung logic tính toán toán học SM-2 (`interval`, `repetitions`, `ease_factor`, `next_review_at`).
+- 📊 **Business / Marketing**: Truyền thông thông điệp "Học từ vựng theo ngữ cảnh kết hợp thuật toán lặp lại ngắt quãng Anki thông minh".
+

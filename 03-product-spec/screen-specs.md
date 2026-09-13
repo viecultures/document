@@ -41,3 +41,29 @@ Tài liệu mô tả chi tiết bố cục, thành phần và tương tác trên
   - Danh sách bài đăng Reflection của người dùng khác.
   - Tự động highlight từ vựng học thuật xuất hiện trong bài viết.
   - Nút thả tim (Reaction counter) và nút Báo cáo vi phạm (Report).
+
+---
+
+## 4. Màn Hình Dictation & Listening (Dictation Screen)
+
+### 4.1. Bố Cục Giao Diện (Layout Anatomy)
+Mô phỏng cấu trúc trải nghiệm của DailyDictation:
+
+- **Header Controls**:
+  - Tab chuyển đổi: `[ Dictation ]` (Chế độ luyện nghe chép) \| `[ Full Transcript ]` (Xem toàn bộ bài đọc song ngữ).
+  - Bộ đếm tiến độ câu: `← 4 / 12 →` (Cho phép bấm phím mũi tên hoặc tự động chuyển câu khi hoàn thành 100%).
+- **Snippet Audio Sticky Player**:
+  - Trình phát âm thanh độc lập chỉ phát đoạn câu hiện tại (từ `audio_start` đến `audio_end`).
+  - Nút Play/Pause, Seekbar thời gian ngắn, nút chọn tốc độ đọc (`0.75x`, `1.0x`, `1.25x`).
+- **Khung Nhập Liệu Chữ (Textarea Input Box)**:
+  - Khung gõ văn bản mở rộng, tự động focus con trỏ khi bắt đầu câu mới.
+  - Nút Micro `[🎙️]` góc dưới bên phải: Kích hoạt Web Speech API để nhập liệu bằng giọng nói (Voice Dictation).
+  - Nút `[ Skip ]`: Bỏ qua câu hiện tại nếu gặp câu quá khó.
+- **Dòng Đánh Giá Thời Gian Thực (Live Feedback Line)**:
+  - Từ gõ đúng: Màu Xanh lá (`Green`).
+  - Từ gõ sai: Gạch chân màu Cam (`Orange Underline`) trực tiếp trong ô gõ.
+  - Từ chưa gõ: Che bởi dấu sao `*******` đại diện cho độ dài từ.
+- **Thanh Tùy Chọn Đánh Giá (Options Checkboxes)**:
+  - `[x] Show answer immediately`: So sánh và gợi ý ký tự/từ thời gian thực.
+  - `[ ] Show full answer`: Hiện 100% đáp án câu khi người học bị tắc.
+
