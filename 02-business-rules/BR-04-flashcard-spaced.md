@@ -1,23 +1,15 @@
-# 📜 Quy Tắc Nghiệp Vụ BR-04: Ôn Tập Flashcard 2 Mặt & Đánh Giá Nhị Phân
+# Quy Tắc Nghiệp Vụ BR-04: Ôn Tập Flashcard 2 Mặt & Thuật Toán Lặp Ngắt Quãng
 
 ## 1. Mục Đích & Phạm Vi
-Quy định cơ chế học chủ động qua thẻ ghi nhớ (Flashcards), cấu trúc 2 mặt thẻ, quy trình tự đánh giá và đo lường tiến độ ghi nhớ từ vựng trên ứng dụng **VN Culture Reader**.
+Quy định cơ chế thẻ ghi nhớ 2 mặt, quy trình tự đánh giá nhị phân và thuật toán nhắc ôn tập tự động (Spaced Repetition).
 
 ---
 
 ## 2. Các Quy Tắc Nghiệp Vụ Cốt Lõi (Core Business Rules)
 
-### BR-04.1: Cấu Trúc Thẻ Nhớ 2 Mặt Bắt Buộc (Mandatory Two-Sided Flashcard Rules)
-Mỗi Flashcard đại diện cho một thực thể `VocabItem` và bắt buộc phải tuân thủ cấu trúc hiển thị 2 mặt như sau:
-
-- **Mặt 1: Mặt Định Danh (Front Side - Identification)**
-  - Hiển thị: **Từ vựng học thuật** (ví dụ: *Architectural*).
-  - Bắt buộc đi kèm: **Câu ngữ cảnh gốc (Context Sentence)** được trích xuất từ bài đọc (ví dụ: *"The citadel displays unique architectural features of the Nguyen Dynasty."*).
-  - Mục đích: Kích thích trí nhớ của người học thông qua ngữ cảnh bài học đã từng trải nghiệm.
-
-- **Mặt 2: Mặt Giải Nghĩa (Back Side - Definition & Linguistics)**
-  - Hiển thị: Phiên âm IPA (ví dụ: */ˌɑːrkɪˈtektʃərəl/*), Từ loại (ví dụ: *adj.*), Nghĩa tiếng Việt (ví dụ: *thuộc kiến trúc*).
-  - Đính kèm: **Nút phát âm thanh AI** (`audio_url`) chuẩn bản xứ.
+### BR-04.1: Cấu Trúc Thẻ Nhớ 2 Mặt Bắt Buộc
+- **Mặt 1 (Mặt Định Danh)**: Hiển thị từ vựng + Câu ngữ cảnh gốc trích xuất từ bài đọc.
+- **Mặt 2 (Mặt Giải Nghĩa)**: Hiển thị phiên âm IPA, từ loại, nghĩa tiếng Việt và nút phát âm thanh AI.
 
 ### BR-04.2: Chiến Lược Ôn Tập 2 Giai Đoạn (2-Phase Flashcard Strategy)
 
@@ -86,4 +78,5 @@ BACK SIDE - GIAI ĐOẠN 2 (Anki SM-2 Spaced Repetition):
   - Giai đoạn 1: Quản lý bảng `UserVocabProgress` với `status: 'learning' | 'mastered'`.
   - Giai đoạn 2: Bổ sung logic tính toán toán học SM-2 (`interval`, `repetitions`, `ease_factor`, `next_review_at`).
 - 📊 **Business / Marketing**: Truyền thông thông điệp "Học từ vựng theo ngữ cảnh kết hợp thuật toán lặp lại ngắt quãng Anki thông minh".
+
 
