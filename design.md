@@ -1,167 +1,332 @@
-# TÀI LIỆU THIẾT KẾ HỆ THỐNG GIAO DIỆN (DESIGN.MD)
+# HỆ THỐNG QUY CHUẨN THIẾT KẾ (DESIGN.MD)
 
-> **Dự án:** Cổng Thông Tin & Trải Nghiệm Văn Hóa Việt Nam  
-> **Phong cách chủ đạo:** Hội họa Dân gian Đông Hồ & Mỹ thuật Truyền thống (Folk Woodblock Aesthetic)  
-> **Nguyên tắc cốt lõi:** Nền giấy điệp tự nhiên – Nét khắc viền đanh gọn – Khối màu phẳng thuần khiết – Kiểu chữ thống nhất.
-
----
-
-## 1. Triết Lý Thiết Kế: Phong Cách Đông Hồ Đương Đại
-
-Phong cách tranh khắc gỗ dân gian Đông Hồ không lạm dụng hiệu ứng đổ bóng phức tạp hay chuyển màu 3D hiện đại. Bản sắc được truyền tải thông qua 4 yếu tố mỹ thuật nguyên bản:
-
-- **Chất nền Giấy Điệp (Texture & Ground):** Toàn bộ nền website sử dụng sắc trắng ngà, vàng nhạt của vỏ điệp nghiền trộn hồ nếp (`#F8E9CF`, `#FAF6EE`), loại bỏ hoàn toàn màu trắng tinh `#FFFFFF` công nghiệp để bảo vệ thị giác và tạo cảm giác mộc bản.
-- **Nét Khắc Than Tre (Woodblock Outlines):** Thay vì các đường viền mờ nhạt mỏng mảnh, các khối card, nút bấm và khung ảnh sử dụng nét viền dứt khoát (1.5px – 2px) với tông mực đen than củi hoặc nâu đậm mộc mạc (`#351903`, `#12332B`).
-- **Mảng Màu Khoáng Thô (Flat Natural Pigments):** Các khối thông tin sử dụng kỹ thuật đổ màu phẳng (flat color blocks), lấy cảm hứng từ màu tự nhiên: vàng hoa hòe, xanh gỉ đồng, đỏ son, lam chàm.
-- **Bố Cục Ước Lệ & Khoảng Trống (Composition & Negative Space):** Giữ không gian thoáng đãng giữa các khối để tôn lên nhịp điệu của chữ và tranh vẽ, tránh nhồi nhét chi tiết.
+> **Dự án:** VieCultures – Học Tiếng Anh Qua Văn Hóa & Nghệ Thuật Việt  
+> **Phong cách:** Modern Heritage Editorial & Atmospheric Glassmorphism (Di sản đương đại hòa sắc không gian)  
+> **Tôn chỉ thị giác:** Tôn trọng tác phẩm hội họa – Kiểu chữ phóng khoáng không đóng khung – Linh kiện mềm mại, trong trẻo.
 
 ---
 
-## 2. Hệ Thống Kiểu Chữ Toàn Trang (Unified Typography)
+## 1. Triết Lý Thiết Kế Giao Diện (Core Design Philosophy)
 
-Toàn bộ các trang trên website dùng chung một quy chuẩn font chữ nhằm tránh xung đột thị giác khi người dùng chuyển trang.
+1. **Unboxed Layout (Bố cục mở, loại bỏ bao bọc cưỡng ép):**
+   - Không sử dụng các khối thẻ (card) hình chữ nhật đục ngầu che chắn cảnh quan.
+   - Tận dụng khoảng trống tự nhiên của tranh (bầu trời, rặng mây, thung lũng) làm nơi neo đậu cho chữ.
+   - Chữ được giải phóng hoàn toàn, hiển thị trực tiếp với độ tương phản tự nhiên được hỗ trợ bởi hiệu ứng đổ bóng mờ cực mịn (`text-shadow: 0 2px 12px rgba(0,0,0,0.35)`).
 
-- **Phông Tiêu Đề (`font-heading`):** `Cormorant Garamond` hoặc `Playfair Display` (Hỗ trợ tiếng Việt đầy đủ). Mang đường nét thanh đậm mô phỏng nhát dao khắc gỗ và nét bút lông cổ điển.
-- **Phông Nội Dung & Giao Diện (`font-body`):** `Be Vietnam Pro` (Sans-serif quốc dân, tối ưu tỷ lệ hiển thị trên màn hình số, chuẩn dấu tiếng Việt).
+2. **Soft Organic Forms (Hình thái hữu cơ mềm mại):**
+   - Toàn bộ nút bấm (button), nhãn phân loại (badge/pill), ô tìm kiếm đều sử dụng chuẩn bo góc cực đại (`border-radius: 9999px` - Pill Shape).
+   - Không sử dụng góc vuông cứng nhắc hay viền đen đậm làm gãy vụn đường nét uốn lượn của tranh.
 
-### Thang Kích Thước & Thông Số Chữ
-
-| Cấp bậc           | Kích thước Desktop | Kích thước Mobile | Trọng lượng (Weight) | Khoảng cách dòng (Line-height) | Ứng dụng cụ thể                       |
-| :---------------- | :----------------- | :---------------- | :------------------- | :----------------------------- | :------------------------------------ |
-| **Hero Title**    | `52px – 60px`      | `32px – 36px`     | 700 (Bold)           | `1.15`                         | Tiêu đề chính trên Hero Banner        |
-| **Heading 1**     | `38px – 44px`      | `28px – 30px`     | 700 (Bold)           | `1.25`                         | Tên trang, tiêu đề phần nội dung lớn  |
-| **Heading 2**     | `28px – 32px`      | `22px – 24px`     | 600 (SemiBold)       | `1.3`                          | Tiêu đề mục con, khối danh mục        |
-| **Heading 3**     | `20px – 22px`      | `18px – 20px`     | 600 (SemiBold)       | `1.4`                          | Tiêu đề Card thông tin                |
-| **Body Large**    | `18px`             | `16px`            | 400 (Regular)        | `1.65`                         | Đoạn dẫn nhập (Intro/Lead text)       |
-| **Body Base**     | `15px – 16px`      | `14px – 15px`     | 400 (Regular)        | `1.6`                          | Nội dung bài viết thường, mô tả       |
-| **Caption / Tag** | `12px – 13px`      | `11px – 12px`     | 600 (SemiBold)       | `1.3`                          | Nhãn phân loại, ngày tháng, chú thích |
+3. **Atmospheric Glassmorphism (Kính mờ khí quyển):**
+   - Các khối chức năng nổi sử dụng chất liệu kính mờ bán trong suốt kết hợp làm nhòe nền hậu cảnh (`backdrop-filter: blur(12px)`).
+   - Đường viền chỉ dày 1px với độ trong suốt tinh tế (`border: 1px solid rgba(255, 255, 255, 0.2)`), tuyệt đối không dùng viền đen than.
 
 ---
 
-## 3. Bản Đồ Mã Màu Theo Từng Trang (Color Architecture)
+## 2. Hệ Thống Kiểu Chữ Tạp Chí (Editorial Typography)
 
-Mỗi trang sở hữu một bộ mã màu độc lập lấy trực tiếp từ tranh mộc bản và bảng màu mẫu, nhưng đồng nhất về mặt ngữ nghĩa (Tokens).
+Bộ phông chữ được tuyển chọn để tạo cảm giác tri thức, thanh thoát của một ấn bản sách ảnh cao cấp:
 
-### Trang Chủ: Tinh Thần Tranh Sơn Mài & Áo Dài Sen
+- **Phông Tiêu Đề (`font-heading`):** `Playfair Display` hoặc `Cormorant Garamond` (Serif). Dày dặn, thanh lịch, mang âm hưởng văn hóa và nghệ thuật thi ca.
+- **Phông Nội Dung (`font-body`):** `Plus Jakarta Sans` hoặc `Be Vietnam Pro` (Sans-serif). Nét chữ tròn trịa, hiện đại, thoáng đãng, cực kỳ êm mắt ở kích cỡ nhỏ.
 
-_Không gian lễ hội thanh bình, giao hòa giữa áo dài xanh ngọc, hoa sen hồng phấn và ánh nhật nguyệt._
+### Thang Kích Thước Chữ (Type Scale)
 
-| Tên Màu                         | Mã HEX    | Giá Trị RGB          | Ứng Dụng Trong Giao Diện                                 |
-| :------------------------------ | :-------- | :------------------- | :------------------------------------------------------- |
-| **Màu Chủ Đạo (Primary)**       | `#1A7368` | `rgb(26, 115, 104)`  | Màu tà áo dài: Nút bấm chính, tiêu đề trang chủ          |
-| **Màu Điểm Xuyết (Secondary)**  | `#E58396` | `rgb(229, 131, 150)` | Sắc sen hồng: Tag sự kiện, gạch chân trang trí, huy hiệu |
-| **Màu Nhấn Sáng (Accent)**      | `#EAA22E` | `rgb(234, 162, 46)`  | Sắc vàng mặt trời: Icon nổi bật, viền khung danh dự      |
-| **Màu Nền Giấy (Background)**   | `#FAF6EE` | `rgb(250, 246, 238)` | Nền trang chủ mô phỏng giấy điệp quét hạt sò             |
-| **Màu Nét Mực (Text & Border)** | `#12332B` | `rgb(18, 51, 43)`    | Màu nét vẽ than củi: Văn bản chính, đường nét viền       |
-
----
-
-### Trang Di Sản & Vùng Cao: Bảng Màu "Heritage Green & Gold"
-
-_Chủ đề: Ruộng bậc thang Tây Bắc, làng bản nhà sàn, di sản thiên nhiên hùng vĩ._
-
-| Tên Màu            | Mã HEX    | Giá Trị RGB          | Ứng Dụng Trong Giao Diện                                    |
-| :----------------- | :-------- | :------------------- | :---------------------------------------------------------- |
-| **Heritage Green** | `#15503C` | `rgb(21, 80, 60)`    | **Primary:** Thanh Menu chính, Nút xem chi tiết địa danh    |
-| **Forest Jade**    | `#2A816F` | `rgb(42, 129, 111)`  | **Secondary:** Nền thẻ phụ, nhãn tag sinh thái              |
-| **Golden Lotus**   | `#D9A441` | `rgb(217, 164, 65)`  | **Accent:** Sắc lúa chín: Viền card nổi bật, số thứ tự bước |
-| **Rice Paper**     | `#F8E9CF` | `rgb(248, 233, 207)` | **Background:** Nền toàn trang tạo cảm giác ấm cúng, cổ xưa |
-| **Earth Bronze**   | `#8A5A2B` | `rgb(138, 90, 43)`   | **Text / Border:** Màu đất đỏ bazan: Tiêu đề phụ, viền khối |
+| Cấp độ             | Kích thước Desktop | Kích thước Mobile | Trọng lượng    | Line-height | Màu sắc khuyên dùng                       |
+| :----------------- | :----------------- | :---------------- | :------------- | :---------- | :---------------------------------------- |
+| **Brand Logo**     | `26px – 28px`      | `22px`            | Bold (700)     | `1`         | Kem ngọc trai (`#FFFDF8`) hoặc Trắng      |
+| **Hero Title**     | `52px – 64px`      | `32px – 38px`     | Bold (700)     | `1.15`      | Trắng tinh khiết (`#FFFFFF`)              |
+| **Hero Subtitle**  | `22px – 26px`      | `18px – 20px`     | Medium (500)   | `1.3`       | Kem vàng nắng nhẹ (`#F5E8C7`)             |
+| **Body Lead**      | `16px – 17px`      | `14px – 15px`     | Regular (400)  | `1.7`       | Trắng mờ sương (`rgba(255,255,255,0.85)`) |
+| **Button Text**    | `14px – 15px`      | `13px – 14px`     | SemiBold (600) | `1`         | Tùy biến theo nền nút                     |
+| **Tagline / Pill** | `12px – 13px`      | `11px – 12px`     | Medium (500)   | `1`         | Vàng nắng hoặc Trắng ngọc                 |
 
 ---
 
-### Trang Không Gian Văn Hóa & Nghệ Thuật: Bảng Màu "Lotus & River Mist"
+## 3. Hệ Bảng Màu Đương Đại (Modern Color Tokens)
 
-_Chủ đề: Sông nước Tràng An, Hồ Gươm sương sớm, tĩnh tại, thơ ca và tranh cổ._
+Tất cả màu sắc được chiết xuất từ ánh sáng mặt trời, ngọc bích, sương mai và tà áo dài trong tranh, nhưng được hiện đại hóa dưới dạng màu kính và màu kem mềm.
 
-| Tên Màu              | Mã HEX    | Giá Trị RGB          | Ứng Dụng Trong Giao Diện                                         |
-| :------------------- | :-------- | :------------------- | :--------------------------------------------------------------- |
-| **Glaucous Sky**     | `#59789F` | `rgb(89, 120, 159)`  | **Primary:** Màu lam khói sương: Nút bấm, thanh tiến trình       |
-| **Powder Blue**      | `#A9B6C4` | `rgb(169, 182, 196)` | **Secondary:** Nền thẻ ảnh mờ ảo, viền chia phân đoạn            |
-| **Vanilla Lotus**    | `#ECE69D` | `rgb(236, 230, 157)` | **Accent:** Sắc nhụy hoa sen: Điểm nhấn thông báo                |
-| **Moss Green**       | `#7A9445` | `rgb(122, 148, 69)`  | **Tertiary:** Biểu tượng trang trí thiên nhiên, nút chuyển trang |
-| **Deep River Green** | `#243C2C` | `rgb(36, 60, 44)`    | **Text / Border:** Nước hồ sâu: Màu chữ chính, khung tranh cổ    |
+### Trang Chủ: "Golden Sun & Jade Silk" (Tranh Sen & Áo Dài)
 
----
+_Lấy cảm hứng từ ánh hoàng hôn rực rỡ và sắc áo ngọc bích sang trọng._
 
-### Trang Lễ Hội & Phố Cổ: Bảng Màu "Earth, Festival & Heritage"
-
-_Chủ đề: Đèn lồng Hội An, ẩm thực truyền thống, kiến trúc tường vàng ngói âm dương._
-
-| Tên Màu             | Mã HEX    | Giá Trị RGB          | Ứng Dụng Trong Giao Diện                                          |
-| :------------------ | :-------- | :------------------- | :---------------------------------------------------------------- |
-| **Golden Brown**    | `#925E06` | `rgb(146, 94, 6)`    | **Primary:** Sắc vàng đất nung phố cổ: Nút đặt vé, nút sự kiện    |
-| **Apple Green**     | `#8DA432` | `rgb(141, 164, 50)`  | **Secondary:** Nền badge lễ hội, biểu tượng thời gian             |
-| **Flax**            | `#EDE383` | `rgb(237, 227, 131)` | **Accent:** Sắc vàng nắng hoàng hôn: Khối nổi bật đặc biệt        |
-| **Dark Moss Green** | `#365004` | `rgb(54, 80, 4)`     | **Text Secondary:** Màu rêu phong ngói cũ: Chữ tiêu đề phụ        |
-| **Bistre**          | `#351903` | `rgb(53, 25, 3)`     | **Text Main / Footer:** Sắc gỗ lim đen: Nền chân trang, viền card |
+| Vai trò           | Tên màu            | Giá trị thực tế          | Mô tả ứng dụng                                                  |
+| :---------------- | :----------------- | :----------------------- | :-------------------------------------------------------------- |
+| **Primary CTA**   | Sungold Cream      | `#FCE5B5`                | Nút "Bắt Đầu Học Ngay": Màu kem vàng ấm, chữ nâu đen sang trọng |
+| **Secondary CTA** | Deep Jade Glass    | `rgba(18, 42, 34, 0.65)` | Nút "Khám Phá": Nền kính xanh ngọc sẫm bán trong suốt           |
+| **Pill Badge**    | Shadow Mist        | `rgba(0, 0, 0, 0.45)`    | Tag "Học Tiếng Anh Tự Nhiên": Kính đen mờ bo tròn               |
+| **Text Primary**  | Pure Ivory         | `#FFFFFF`                | Tiêu đề chính, logo trên nền tranh                              |
+| **Text Accent**   | Warm Lotus Gold    | `#F5D280`                | Tiêu đề phụ, dấu sao, icon điểm nhấn                            |
+| **Page Base**     | Deep Heritage Jade | `#0D1C18`                | Nền chuyển tiếp khi cuộn xuống dưới chân trang                  |
 
 ---
 
-## 4. Nguyên Tắc Thiết Kế Linh Kiện UI Thuần Dân Gian
+### Trang 2: "Heritage Green & Gold" (Ruộng Bậc Thang & Rừng Vùng Cao)
 
-Để giao diện toát lên chất tranh mộc bản Đông Hồ thay vì phong cách phẳng Tây phương (Flat Design) thông thường, các thành phần giao diện tuân theo nguyên tắc sau:
-
-- **Đường viền nét khắc (Woodblock Border):** Mọi khối nội dung (`.dongho-card`, `.dongho-btn`) đều có đường viền màu đậm bản sắc (`border: 2px solid var(--color-border)`). Bo góc rất nhẹ (`border-radius: 4px` hoặc `2px`), giữ cảm giác phôi gỗ vuông vức.
-- **Bóng đổ cứng (Hard Cut-out Shadows):** Tuyệt đối không dùng bóng mờ nhòe (soft blur shadow). Sử dụng bóng đổ dịch chuyển góc cứng (Hard Offset Shadow) mô phỏng các tấm mộc bản xếp chồng:
-  `box-shadow: 4px 4px 0px var(--color-border);`
-- **Nút bấm kiểu Con Dấu Khắc Gỗ:**
-  - Trạng thái tĩnh: Nền màu đơn sắc + Viền đen/đậm + Bóng cứng 3px.
-  - Trạng thái Hover: Dịch chuyển nhẹ `-2px -2px` và bóng giãn thành `5px 5px`.
-  - Trạng thái Active: Lún xuống vị trí cũ `translate(2px, 2px)` và bóng mất đi (`box-shadow: none`).
+| Vai trò             | Tên màu         | Giá trị thực tế            | Mô tả ứng dụng                                      |
+| :------------------ | :-------------- | :------------------------- | :-------------------------------------------------- |
+| **Primary**         | Terraced Forest | `#15503C`                  | Màu thương hiệu chính, thanh tiến trình học tập     |
+| **Secondary Glass** | Jade Glaze      | `rgba(42, 129, 111, 0.25)` | Thẻ bài học kính mờ xanh bích                       |
+| **Accent Glow**     | Ripe Paddy Gold | `#E2A93B`                  | Nút hoàn thành bài học, huy hiệu sao                |
+| **Background**      | Silk Rice Paper | `#FDFBF7`                  | Nền trang nhã hạt gạo, sáng sạch không gây chói mắt |
+| **Text Dominant**   | Deep Pine Ink   | `#112720`                  | Màu chữ bài viết, sắc sảo dễ đọc                    |
 
 ---
 
-## 5. Mã Nguồn Triển Khai Hoàn Chỉnh (`tokens.css`)
+### Trang 3: "Lotus & River Mist" (Mặt Hồ & Tháp Cổ Sương Chiều)
 
-Lưu tệp này vào dự án (`assets/css/tokens.css`). Khi viết file HTML chỉ cần gắn thuộc tính `data-theme` tương ứng vào thẻ `<body>`.
+| Vai trò             | Tên màu           | Giá trị thực tế            | Mô tả ứng dụng                             |
+| :------------------ | :---------------- | :------------------------- | :----------------------------------------- |
+| **Primary**         | Mist Blue         | `#59789F`                  | Nút luyện nghe Podcast, biểu tượng sóng âm |
+| **Secondary Glass** | Pale Lake Mist    | `rgba(169, 182, 196, 0.2)` | Khối chứa đoạn hội thoại song ngữ          |
+| **Accent Glow**     | Lotus Stamen      | `#F0E89E`                  | Điểm nhấn từ vựng mới, nút tua nhanh       |
+| **Background**      | Morning Fog White | `#F5F8FA`                  | Nền trang màu lam ngọc sương nhạt          |
+| **Text Dominant**   | Deep River Tone   | `#192A20`                  | Chữ đọc tài liệu, không dùng đen tuyền     |
+
+---
+
+### Trang 4: "Earth, Festival & Heritage" (Phố Cổ Hội An & Đèn Lồng)
+
+| Vai trò             | Tên màu         | Giá trị thực tế            | Mô tả ứng dụng                          |
+| :------------------ | :-------------- | :------------------------- | :-------------------------------------- |
+| **Primary**         | Lantern Ochre   | `#A86708`                  | Nút đặt vé sự kiện, chọn phòng văn hóa  |
+| **Secondary Glass** | Moss Glaze      | `rgba(141, 164, 50, 0.15)` | Khối thông tin địa danh phố cổ          |
+| **Accent Glow**     | Old Wall Yellow | `#F2E788`                  | Nhãn giờ mở cửa, huy hiệu di sản UNESCO |
+| **Background**      | Warm Paper      | `#FDFCF7`                  | Nền vàng nắng nhạt của bức tường vôi cũ |
+| **Text Dominant**   | Ebony Wood      | `#2B1503`                  | Màu chữ nâu gỗ trầm lắng                |
+
+---
+
+## 4. Đặc Tả Thành Phần Giao Diện Chuẩn 88d (Component Blueprint)
+
+### A. Thanh Điều Hướng (Floating Glass Navbar)
+
+- Không viền đáy, không đóng ô vuông. Nền trong suốt hoặc kính mờ nhẹ khi cuộn trang.
+- Menu căn giữa, khoảng cách rộng rãi (gap: 32px).
+- Chữ trắng kem, khi hover xuất hiện gạch chân siêu mảnh hoặc chuyển sang sắc vàng nắng.
+
+### B. Thẻ Nhãn Đỉnh Đầu (Category Pill Tag)
+
+- Nền kính đen mờ: `background: rgba(0, 0, 0, 0.4);`
+- Làm nhòe hậu cảnh: `backdrop-filter: blur(8px);`
+- Viền mờ tinh tế: `border: 1px solid rgba(255, 255, 255, 0.15);`
+- Bo góc: `border-radius: 9999px;`
+- Điểm xuyết một chấm tròn nhỏ màu cam đất bên cạnh chữ.
+
+### C. Nút Bấm Đôi (The Dual Button Group)
+
+1. **Nút Chính (Primary Pill):**
+   - Nền: Màu kem vàng lúa chín mượt mà (`#FCE5B5`).
+   - Chữ: Màu nâu đen mộc (`#1A1A1A`), font chữ dày dặn, có mũi tên nhỏ chỉ sang phải `→`.
+   - Hiệu ứng: Không có viền đen thô. Đổ bóng mờ mịn màng (`box-shadow: 0 4px 20px rgba(252, 229, 181, 0.25)`).
+2. **Nút Phụ (Secondary Glass Pill):**
+   - Nền: Kính sẫm màu ngọc bích `rgba(18, 42, 34, 0.6)`.
+   - Chữ: Màu trắng tinh khôi, viền kính siêu mỏng `1px solid rgba(255, 255, 255, 0.2)`.
+   - Có icon sao lấp lánh (Sparkle) hoặc la bàn nhỏ ở bên trái.
+
+---
+
+## 5. File Mã Nguồn Triển Khai CSS (`modern-tokens.css`)
+
+Sao chép toàn bộ khối code này vào dự án của bạn để tạo ra giao diện chuẩn 100% như bức ảnh 88d:
 
 ```css
 /* ==========================================================================
-   1. GOOGLE FONTS DÙNG CHUNG (Cormorant Garamond & Be Vietnam Pro)
+   1. GOOGLE FONTS CAO CẤP DÙNG CHUNG
    ========================================================================== */
-@import url('[https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&display=swap](https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&display=swap)');
+@import url("[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap)");
 
 /* ==========================================================================
-   2. BIẾN TOÀN CỤC & THÔNG SỐ ĐÔNG HỒ CHUẨN
+   2. HỆ BIẾN THIẾT KẾ TOÀN TRANG (GLOBAL TOKENS)
    ========================================================================== */
 :root {
-  --font-heading: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Be Vietnam Pro', -apple-system, sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Quy chuẩn bo góc kiểu mộc bản (không bo tròn dạng viên thuốc) */
-  --radius-woodcut: 3px;
-  --border-width: 2px;
+  /* Chuẩn bo tròn hạt đậu / viên thuốc (Pill Shape) */
+  --radius-pill: 9999px;
+  --radius-card: 16px;
 
-  /* Hiệu ứng chuyển động */
-  --transition-dongho: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  /* Hiệu ứng chuyển động mượt */
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ==========================================================================
-   3. BẢNG MÀU THEO TRANG (THEMES)
+   3. THEME TRANG CHỦ (CHUẨN FORM ẢNH 88D)
    ========================================================================== */
-
-/* --- TRANG CHỦ: TRANH SEN & ÁO DÀI --- */
 body[data-theme="home"] {
-  --color-primary: #1A7368;
-  --color-primary-hover: #13584F;
-  --color-secondary: #E58396;
-  --color-accent: #EAA22E;
-  --color-bg: #FAF6EE;         /* Nền giấy điệp */
-  --color-surface: #FFFFFF;    /* Mặt thẻ card */
-  --color-text-main: #12332B;  /* Nét than mực */
-  --color-text-muted: #4A635D;
-  --color-border: #12332B;     /* Viền nét khắc mộc */
-  --shadow-color: #12332B;
+  /* Màu sắc chủ đạo */
+  --btn-primary-bg: #fce5b5;
+  --btn-primary-text: #18221e;
+  --btn-primary-hover: #fff0ce;
+
+  --btn-glass-bg: rgba(18, 42, 34, 0.65);
+  --btn-glass-text: #ffffff;
+  --btn-glass-border: rgba(255, 255, 255, 0.25);
+  --btn-glass-hover: rgba(26, 60, 48, 0.85);
+
+  --pill-tag-bg: rgba(0, 0, 0, 0.45);
+  --pill-tag-text: #f5e8c7;
+  --pill-tag-border: rgba(255, 255, 255, 0.15);
+
+  --text-hero-main: #ffffff;
+  --text-hero-sub: #f7e5c3;
+  --text-hero-desc: rgba(255, 255, 255, 0.85);
 }
 
-/* --- TRANG DI SẢN: HERITAGE GREEN & GOLD --- */
-body[data-theme="heritage"] {
-  --color-primary: #15503C;
-  --color-primary-hover: #0E3628;
-  --color-secondary: #2A816F;
-  --color-accent: #D9A441;
-  --color-bg: #F8E9CF;         /* Nền vàng rơm cổ */
-  --color-surface: #FCF5E9;
-  --color-text-
+/* ==========================================================================
+   4. CÁC LINH KIỆN GIAO DIỆN HIỆN ĐẠI (COMPONENTS)
+   ========================================================================== */
+
+/* Khối nhãn nhỏ trên tiêu đề (Pill Tag) */
+.glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background-color: var(--pill-tag-bg);
+  border: 1px solid var(--pill-tag-border);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--pill-tag-text);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.glass-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #e27941; /* Điểm cam đất nhấn nhẹ */
+}
+
+/* Cụm Tiêu Đề Hero (Không dùng hộp bao quanh) */
+.hero-title-group {
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+
+.hero-logo-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hero-logo-box {
+  display: inline-block;
+  background-color: #a13225; /* Đỏ son mộc bản */
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 3px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.hero-brand-name {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-hero-main);
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.hero-main-heading {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-hero-main);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+}
+
+.hero-main-subheading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-hero-sub);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-hero-desc);
+  max-width: 580px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  margin-bottom: 36px;
+}
+
+/* Cụm Nút Bấm Đôi Chuẩn 88d */
+.hero-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Nút Chính (Màu Kem Nắng Ấm) */
+.btn-pill-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.btn-pill-primary:hover {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(252, 229, 181, 0.35);
+}
+
+/* Nút Phụ (Kính Mờ Đen Rêu) */
+.btn-pill-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--btn-glass-bg);
+  color: var(--btn-glass-text);
+  border: 1px solid var(--btn-glass-border);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-pill-glass:hover {
+  background-color: var(--btn-glass-hover);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
 ```
