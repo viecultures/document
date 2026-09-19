@@ -1,6 +1,6 @@
-# VN Culture Reader - Hệ Thống Tài Liệu Dự Án (Project Documentation)
+# VieCultures - Hệ Thống Tài Liệu Dự Án (Project Documentation)
 
-Chào mừng bạn đến với kho tài liệu chính thức của dự án VN Culture Reader - Nền tảng EdTech học tiếng Anh qua ngữ cảnh văn hóa Việt Nam.
+Chào mừng bạn đến với kho tài liệu chính thức của dự án VieCultures - Nền tảng EdTech học tiếng Anh qua ngữ cảnh văn hóa Việt Nam.
 
 Tài liệu này được thiết kế nhằm mục đích đồng bộ góc nhìn toàn diện cho tất cả các thành viên trong team: Business, Marketing, Developers (FE/BE) và các AI Agents.
 
