@@ -1,332 +1,714 @@
 # HỆ THỐNG QUY CHUẨN THIẾT KẾ (DESIGN.MD)
 
-> **Dự án:** VieCultures – Học Tiếng Anh Qua Văn Hóa & Nghệ Thuật Việt  
-> **Phong cách:** Modern Heritage Editorial & Atmospheric Glassmorphism (Di sản đương đại hòa sắc không gian)  
-> **Tôn chỉ thị giác:** Tôn trọng tác phẩm hội họa – Kiểu chữ phóng khoáng không đóng khung – Linh kiện mềm mại, trong trẻo.
+> **Dự án:** VieCultures – Nền tảng học Tiếng Anh qua Văn Hóa & Bản Sắc Việt  
+> **Slogan:** *Khắc ghi nguồn cội, gìn giữ văn hóa*  
+> **Thông điệp chính (Tagline):** *Gom từng từ nhỏ, hiểu một Việt Nam lớn. (Small words, wonderful worlds)*  
+> **Phong cách:** Warm Heritage Editorial & Cultural Storytelling (Di sản ấm áp & Nghệ thuật kể chuyện văn hóa)  
+> **Cảm hứng thị giác:** Chất liệu giấy dó thủ công, sắc men gốm lam, xanh di sản, vàng son cung đình và sắc sen hồng dịu nhẹ.
 
 ---
 
 ## 1. Triết Lý Thiết Kế Giao Diện (Core Design Philosophy)
 
-1. **Unboxed Layout (Bố cục mở, loại bỏ bao bọc cưỡng ép):**
-   - Không sử dụng các khối thẻ (card) hình chữ nhật đục ngầu che chắn cảnh quan.
-   - Tận dụng khoảng trống tự nhiên của tranh (bầu trời, rặng mây, thung lũng) làm nơi neo đậu cho chữ.
-   - Chữ được giải phóng hoàn toàn, hiển thị trực tiếp với độ tương phản tự nhiên được hỗ trợ bởi hiệu ứng đổ bóng mờ cực mịn (`text-shadow: 0 2px 12px rgba(0,0,0,0.35)`).
+1. **Warm Paper & Heritage Atmosphere (Không gian giấy mộc & Di sản ấm áp):**
+   - Chuyển từ phong cách kính tối (dark glassmorphism) sang tông màu nền giấy kem ngà (`#FBF7EE` / `#F6EEDC`), mang lại cảm giác thân thuộc như lật mở từng trang sách ảnh di sản văn hóa.
+   - Tránh nền trắng tinh `#FFFFFF` công nghiệp gây gắt mắt; tận dụng các sắc độ kem và be mây làm dịu thị giác người học.
 
-2. **Soft Organic Forms (Hình thái hữu cơ mềm mại):**
-   - Toàn bộ nút bấm (button), nhãn phân loại (badge/pill), ô tìm kiếm đều sử dụng chuẩn bo góc cực đại (`border-radius: 9999px` - Pill Shape).
-   - Không sử dụng góc vuông cứng nhắc hay viền đen đậm làm gãy vụn đường nét uốn lượn của tranh.
+2. **Harmonious Cultural Palette (Bảng màu văn hóa hài hòa):**
+   - Màu sắc được chắt lọc từ các gam màu truyền thống: xanh di sản đậm của tà áo dài và nếp rêu cổ kính, xanh ngọc trời mây, vàng son hoàng cung, và điểm xuyết sắc hồng sen tao nhã.
+   - Màu sắc đóng vai trò phân tầng thị giác: nền dịu giúp văn bản và các tác phẩm minh họa nổi bật trang trọng.
 
-3. **Atmospheric Glassmorphism (Kính mờ khí quyển):**
-   - Các khối chức năng nổi sử dụng chất liệu kính mờ bán trong suốt kết hợp làm nhòe nền hậu cảnh (`backdrop-filter: blur(12px)`).
-   - Đường viền chỉ dày 1px với độ trong suốt tinh tế (`border: 1px solid rgba(255, 255, 255, 0.2)`), tuyệt đối không dùng viền đen than.
+3. **Curated Editorial Typography (Kiểu chữ ấn bản & Thi pháp):**
+   - Kết hợp ba dòng phông chữ:
+     - **Serif cổ điển:** Tôn vinh nét đẹp tri thức, trang trọng cho tiêu đề chính.
+     - **Sans-serif hiện đại:** Tối ưu khả năng đọc lướt từ vựng và nội dung học thuật.
+     - **Cursive nghệ thuật:** Điểm xuyết các câu danh ngôn, trích dẫn truyền cảm hứng theo lối thư bút mềm mại.
 
----
-
-## 2. Hệ Thống Kiểu Chữ Tạp Chí (Editorial Typography)
-
-Bộ phông chữ được tuyển chọn để tạo cảm giác tri thức, thanh thoát của một ấn bản sách ảnh cao cấp:
-
-- **Phông Tiêu Đề (`font-heading`):** `Playfair Display` hoặc `Cormorant Garamond` (Serif). Dày dặn, thanh lịch, mang âm hưởng văn hóa và nghệ thuật thi ca.
-- **Phông Nội Dung (`font-body`):** `Plus Jakarta Sans` hoặc `Be Vietnam Pro` (Sans-serif). Nét chữ tròn trịa, hiện đại, thoáng đãng, cực kỳ êm mắt ở kích cỡ nhỏ.
-
-### Thang Kích Thước Chữ (Type Scale)
-
-| Cấp độ             | Kích thước Desktop | Kích thước Mobile | Trọng lượng    | Line-height | Màu sắc khuyên dùng                       |
-| :----------------- | :----------------- | :---------------- | :------------- | :---------- | :---------------------------------------- |
-| **Brand Logo**     | `26px – 28px`      | `22px`            | Bold (700)     | `1`         | Kem ngọc trai (`#FFFDF8`) hoặc Trắng      |
-| **Hero Title**     | `52px – 64px`      | `32px – 38px`     | Bold (700)     | `1.15`      | Trắng tinh khiết (`#FFFFFF`)              |
-| **Hero Subtitle**  | `22px – 26px`      | `18px – 20px`     | Medium (500)   | `1.3`       | Kem vàng nắng nhẹ (`#F5E8C7`)             |
-| **Body Lead**      | `16px – 17px`      | `14px – 15px`     | Regular (400)  | `1.7`       | Trắng mờ sương (`rgba(255,255,255,0.85)`) |
-| **Button Text**    | `14px – 15px`      | `13px – 14px`     | SemiBold (600) | `1`         | Tùy biến theo nền nút                     |
-| **Tagline / Pill** | `12px – 13px`      | `11px – 12px`     | Medium (500)   | `1`         | Vàng nắng hoặc Trắng ngọc                 |
+4. **Structured Topic Exploration (Khám phá theo chuyên đề trực quan):**
+   - Bố cục trang mạch lạc, dẫn dắt tự nhiên từ **Nhận diện & Định hướng (Navbar)** -> **Khởi nguồn cảm hứng & Tương tác nhanh (Hero Section)** -> **Bốn miền khám phá văn hóa (Explore Section Cards)**.
+   - Mọi khối nội dung đều có hình ảnh minh họa sống động, nút tương tác rõ nét định vị mục tiêu học tập.
 
 ---
 
-## 3. Hệ Bảng Màu Đương Đại (Modern Color Tokens)
+## 2. Hệ Thống Kiểu Chữ (Typography System)
 
-Tất cả màu sắc được chiết xuất từ ánh sáng mặt trời, ngọc bích, sương mai và tà áo dài trong tranh, nhưng được hiện đại hóa dưới dạng màu kính và màu kem mềm.
+| Nhóm phông | Tên phông chữ | Phong cách / Vai trò | Ứng dụng cụ thể |
+| :--- | :--- | :--- | :--- |
+| **Heading** | `'Playfair Display', 'Lora', serif` | Sang trọng, học thuật, di sản | Tiêu đề trang (Brand H1), tiêu đề section (H2), tiêu đề thẻ chủ đề (H3) |
+| **Body** | `'Be Vietnam Pro', sans-serif` | Rõ ràng, hiện đại, tối ưu tiếng Việt & tiếng Anh | Đoạn văn, thẻ bài học, phụ đề (sub-tagline), menu điều hướng, nút CTA |
+| **Decorative** | `'Dancing Script', cursive` | Viết tay phóng khoáng, thi pháp | Câu trích dẫn nghệ thuật (Quotes), ghi chú cảm hứng văn hóa |
 
-### Trang Chủ: "Golden Sun & Jade Silk" (Tranh Sen & Áo Dài)
+### Thang Kích Thước & Phân Cấp Chữ (Type Scale)
 
-_Lấy cảm hứng từ ánh hoàng hôn rực rỡ và sắc áo ngọc bích sang trọng._
-
-| Vai trò           | Tên màu            | Giá trị thực tế          | Mô tả ứng dụng                                                  |
-| :---------------- | :----------------- | :----------------------- | :-------------------------------------------------------------- |
-| **Primary CTA**   | Sungold Cream      | `#FCE5B5`                | Nút "Bắt Đầu Học Ngay": Màu kem vàng ấm, chữ nâu đen sang trọng |
-| **Secondary CTA** | Deep Jade Glass    | `rgba(18, 42, 34, 0.65)` | Nút "Khám Phá": Nền kính xanh ngọc sẫm bán trong suốt           |
-| **Pill Badge**    | Shadow Mist        | `rgba(0, 0, 0, 0.45)`    | Tag "Học Tiếng Anh Tự Nhiên": Kính đen mờ bo tròn               |
-| **Text Primary**  | Pure Ivory         | `#FFFFFF`                | Tiêu đề chính, logo trên nền tranh                              |
-| **Text Accent**   | Warm Lotus Gold    | `#F5D280`                | Tiêu đề phụ, dấu sao, icon điểm nhấn                            |
-| **Page Base**     | Deep Heritage Jade | `#0D1C18`                | Nền chuyển tiếp khi cuộn xuống dưới chân trang                  |
-
----
-
-### Trang 2: "Heritage Green & Gold" (Ruộng Bậc Thang & Rừng Vùng Cao)
-
-| Vai trò             | Tên màu         | Giá trị thực tế            | Mô tả ứng dụng                                      |
-| :------------------ | :-------------- | :------------------------- | :-------------------------------------------------- |
-| **Primary**         | Terraced Forest | `#15503C`                  | Màu thương hiệu chính, thanh tiến trình học tập     |
-| **Secondary Glass** | Jade Glaze      | `rgba(42, 129, 111, 0.25)` | Thẻ bài học kính mờ xanh bích                       |
-| **Accent Glow**     | Ripe Paddy Gold | `#E2A93B`                  | Nút hoàn thành bài học, huy hiệu sao                |
-| **Background**      | Silk Rice Paper | `#FDFBF7`                  | Nền trang nhã hạt gạo, sáng sạch không gây chói mắt |
-| **Text Dominant**   | Deep Pine Ink   | `#112720`                  | Màu chữ bài viết, sắc sảo dễ đọc                    |
+| Cấp độ | Desktop Size | Mobile Size | Weight | Line Height | Ứng dụng |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Display Title (Hero H1)** | `48px – 56px` | `32px – 36px` | Bold (700) | `1.15` | Tên thương hiệu `VieCultures` |
+| **Hero Tagline** | `22px – 26px` | `18px – 20px` | SemiBold (600) | `1.35` | "Gom từng từ nhỏ, hiểu một Việt Nam lớn." |
+| **Hero Sub-tagline** | `16px – 18px` | `14px – 15px` | Medium (500) | `1.5` | "Học tiếng Anh qua văn hóa Việt Nam" |
+| **Decorative Quote** | `22px – 26px` | `18px – 20px` | SemiBold (600) | `1.3` | "Small words, wonderful worlds" |
+| **Section Heading (H2)** | `32px – 38px` | `24px – 28px` | Bold (700) | `1.2` | "Bốn miền khám phá" |
+| **Section Lead** | `15px – 16px` | `14px` | Regular (400) | `1.6` | Đoạn giới thiệu dưới H2 |
+| **Card Title (H3)** | `18px – 20px` | `16px – 18px` | SemiBold (600) | `1.3` | Tên 4 chuyên đề khám phá |
+| **Navigation Links** | `14px – 15px` | `14px` | Medium (500) | `1` | Menu navbar & footer links |
+| **CTA / Buttons** | `14px – 15px` | `13px – 14px` | SemiBold (600) | `1` | "Bắt đầu khám phá →", "Khám phá →" |
+| **Slogan Tagline** | `12px – 13px` | `11px – 12px` | Regular (400) | `1.2` | "Khắc ghi nguồn cội, gìn giữ văn hóa" |
 
 ---
 
-### Trang 3: "Lotus & River Mist" (Mặt Hồ & Tháp Cổ Sương Chiều)
+## 3. Hệ Bảng Màu & Design Tokens (Color Palette & Tokens)
 
-| Vai trò             | Tên màu           | Giá trị thực tế            | Mô tả ứng dụng                             |
-| :------------------ | :---------------- | :------------------------- | :----------------------------------------- |
-| **Primary**         | Mist Blue         | `#59789F`                  | Nút luyện nghe Podcast, biểu tượng sóng âm |
-| **Secondary Glass** | Pale Lake Mist    | `rgba(169, 182, 196, 0.2)` | Khối chứa đoạn hội thoại song ngữ          |
-| **Accent Glow**     | Lotus Stamen      | `#F0E89E`                  | Điểm nhấn từ vựng mới, nút tua nhanh       |
-| **Background**      | Morning Fog White | `#F5F8FA`                  | Nền trang màu lam ngọc sương nhạt          |
-| **Text Dominant**   | Deep River Tone   | `#192A20`                  | Chữ đọc tài liệu, không dùng đen tuyền     |
+### Bảng Màu Văn Hóa Chủ Đạo
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│  #FBF7EE        #F6EEDC        #BFE3EA        #9FCED8        #6E9FA1    │
+│  Kem ngà sáng   Kem giấy       Xanh trời dịu  Xanh horizon   Xanh teal  │
+│  (Nền chính)    (Nền phụ)      (Nền banner)   (Card phụ)     (Icon)     │
+├─────────────────────────────────────────────────────────────────────────┤
+│  #1E4B43        #D9B76A        #E8B7B2        #E8DFCB        #2C2523    │
+│  Xanh di sản    Vàng cổ        Hồng sen       Be mây         Chữ chính  │
+│  (Chữ/Nút/Base) (Viền/Accent)  (Accent nhẹ)   (Divider)      (Text dark)│
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+| Tên màu sắc | Mã HEX | Vai trò kiến trúc giao diện |
+| :--- | :--- | :--- |
+| **Kem ngà sáng (Light Ivory)** | `#FBF7EE` | **Nền chính (Body Background):** Tạo cảm giác trang giấy thanh nhã, ấm cúng. |
+| **Kem giấy (Parchment Cream)** | `#F6EEDC` | **Nền phụ / Section Sub-bg:** Dùng cho thanh điều hướng, ô widget, nền phân đoạn. |
+| **Xanh trời dịu (Soft Sky Teal)** | `#BFE3EA` | **Nền section / banner:** Tạo không gian thoáng đãng, mở rộng chiều sâu thị giác. |
+| **Xanh horizon (Horizon Blue)** | `#9FCED8` | **Card / Block phụ:** Điểm nhấn cho khối phụ, banner con, viền card nổi bật. |
+| **Xanh teal núi (Mountain Teal)** | `#6E9FA1` | **Icon / Minh họa phụ:** Màu sắc cho đồ họa, icon chức năng, huy hiệu chuyên mục. |
+| **Xanh di sản đậm (Heritage Jade)** | `#1E4B43` | **Chữ tiêu đề, Button chính, Footer:** Màu nhận diện thương hiệu chủ đạo, độ tương phản cao. |
+| **Vàng cổ (Antique Gold)** | `#D9B76A` | **Viền / Icon / Highlight:** Dấu sao, điểm nhấn huy hiệu, viền nút hover hoặc thẻ đặc biệt. |
+| **Hồng sen (Lotus Pink)** | `#E8B7B2` | **Accent nhẹ:** Điểm xuyết cánh hoa, thẻ từ vựng mềm, icon thể hiện cảm xúc. |
+| **Be mây (Cloud Mist)** | `#E8DFCB` | **Divider / Đường kẻ / Nền trung gian:** Phân cách nhẹ nhàng giữa các khối nội dung. |
+| **Chữ chính (Main Text Dark)** | `#2C2523` | **Nội dung văn bản chính:** Sắc nâu than cổ điển, êm mắt hơn màu đen tuyền `#000000`. |
+| **Chữ phụ (Muted Text)** | `#6B635B` | **Phụ đề, mô tả ngắn, meta data:** Dễ đọc, phân cấp rõ rệt so với tiêu đề chính. |
+| **Nền thẻ (Card Surface)** | `#FDFBF7` | **Mặt phẳng thẻ nội dung:** Trắng ngà nhẹ nhàng, viền mỏng tinh tế. |
+
+### Bộ Biến Toàn Cục CSS (Global CSS Tokens)
+
+```css
+:root {
+  /* Color Tokens */
+  --bg-primary: #fbf7ee;
+  --bg-secondary: #f6eedc;
+  --bg-banner: #bfe3ea;
+  --bg-card: #fdfbf7;
+  --bg-card-sub: #9fced8;
+
+  --color-primary: #3d6e70;
+  --color-primary-dark: #1e4b43;
+  --color-teal-mountain: #6e9fa1;
+  --color-accent-gold: #d9b76a;
+  --color-accent-pink: #e8b7b2;
+  --color-accent-red: #a33b2e;
+  --divider-color: #e8dfcb;
+
+  --text-main: #2c2523;
+  --text-muted: #6b635b;
+  --text-on-dark: #ffffff;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', 'Lora', serif;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+  --font-decorative: 'Dancing Script', cursive;
+
+  /* Bo góc & Đổ bóng */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  --shadow-soft: 0 4px 20px rgba(30, 75, 67, 0.08);
+  --shadow-card: 0 6px 24px rgba(44, 37, 35, 0.06);
+}
+```
 
 ---
 
-### Trang 4: "Earth, Festival & Heritage" (Phố Cổ Hội An & Đèn Lồng)
+## 4. Cấu Trúc Khung Toàn Trang & Đặc Tả Thành Phần (Layout & Components)
 
-| Vai trò             | Tên màu         | Giá trị thực tế            | Mô tả ứng dụng                          |
-| :------------------ | :-------------- | :------------------------- | :-------------------------------------- |
-| **Primary**         | Lantern Ochre   | `#A86708`                  | Nút đặt vé sự kiện, chọn phòng văn hóa  |
-| **Secondary Glass** | Moss Glaze      | `rgba(141, 164, 50, 0.15)` | Khối thông tin địa danh phố cổ          |
-| **Accent Glow**     | Old Wall Yellow | `#F2E788`                  | Nhãn giờ mở cửa, huy hiệu di sản UNESCO |
-| **Background**      | Warm Paper      | `#FDFCF7`                  | Nền vàng nắng nhạt của bức tường vôi cũ |
-| **Text Dominant**   | Ebony Wood      | `#2B1503`                  | Màu chữ nâu gỗ trầm lắng                |
+Toàn bộ trang đích (Landing Page) tuân thủ cấu trúc phân đoạn rõ ràng:
 
----
-
-## 4. Đặc Tả Thành Phần Giao Diện Chuẩn 88d (Component Blueprint)
-
-### A. Thanh Điều Hướng (Floating Glass Navbar)
-
-- Không viền đáy, không đóng ô vuông. Nền trong suốt hoặc kính mờ nhẹ khi cuộn trang.
-- Menu căn giữa, khoảng cách rộng rãi (gap: 32px).
-- Chữ trắng kem, khi hover xuất hiện gạch chân siêu mảnh hoặc chuyển sang sắc vàng nắng.
-
-### B. Thẻ Nhãn Đỉnh Đầu (Category Pill Tag)
-
-- Nền kính đen mờ: `background: rgba(0, 0, 0, 0.4);`
-- Làm nhòe hậu cảnh: `backdrop-filter: blur(8px);`
-- Viền mờ tinh tế: `border: 1px solid rgba(255, 255, 255, 0.15);`
-- Bo góc: `border-radius: 9999px;`
-- Điểm xuyết một chấm tròn nhỏ màu cam đất bên cạnh chữ.
-
-### C. Nút Bấm Đôi (The Dual Button Group)
-
-1. **Nút Chính (Primary Pill):**
-   - Nền: Màu kem vàng lúa chín mượt mà (`#FCE5B5`).
-   - Chữ: Màu nâu đen mộc (`#1A1A1A`), font chữ dày dặn, có mũi tên nhỏ chỉ sang phải `→`.
-   - Hiệu ứng: Không có viền đen thô. Đổ bóng mờ mịn màng (`box-shadow: 0 4px 20px rgba(252, 229, 181, 0.25)`).
-2. **Nút Phụ (Secondary Glass Pill):**
-   - Nền: Kính sẫm màu ngọc bích `rgba(18, 42, 34, 0.6)`.
-   - Chữ: Màu trắng tinh khôi, viền kính siêu mỏng `1px solid rgba(255, 255, 255, 0.2)`.
-   - Có icon sao lấp lánh (Sparkle) hoặc la bàn nhỏ ở bên trái.
+```
+[ 1. Navigation Bar (Logo + Slogan + Menu + Action Icons) ]
+[ 2. Hero Section: Left (Title + Taglines + CTA + Widget) | Right (Quote + Hero Art) ]
+[ 3. Explore Section: "Bốn miền khám phá" (Header + 4 Topic Cards Grid) ]
+```
 
 ---
 
-## 5. File Mã Nguồn Triển Khai CSS (`modern-tokens.css`)
+### 4.1. Thanh Điều Hướng (Navigation Bar)
 
-Sao chép toàn bộ khối code này vào dự án của bạn để tạo ra giao diện chuẩn 100% như bức ảnh 88d:
+- **Vị trí & Nền:** Cố định đỉnh trang hoặc sticky, nền kem giấy nhẹ nhàng (`var(--bg-secondary)`) hoặc trong suốt hòa vào nền chính, đường viền đáy tinh tế với sắc be mây (`--divider-color`).
+- **Cấu trúc thành phần:**
+  1. **Logo & Slogan:**
+     - Logo VieCultures sắc nét.
+     - Slogan đặt trang nhã ngay cạnh logo: *"Khắc ghi nguồn cội, gìn giữ văn hóa"*.
+  2. **Liên kết điều hướng (Nav Links):**
+     - Menu căn giữa: `Khám phá` (`#kham-pha`), `Từ vựng` (`#tu-vung`), `Sổ tay của tôi` (`#so-tay`).
+     - Font: `var(--font-body)`, hover đổi sắc sang xanh di sản `--color-primary-dark` với gạch chân lượn sóng hoặc hiệu ứng chuyển sắc êm.
+  3. **Cụm thao tác (Nav Actions):**
+     - Nút icon tìm kiếm (`icon-search`).
+     - Nút icon tài khoản người dùng (`icon-user`).
+
+> **Cần ảnh asset:** `File logo chính thức định dạng PNG trong suốt (assets/logo-viecultures.png), sắc nét, bố cục ngang cân đối kèm biểu tượng thương hiệu VieCultures.`
+
+> **Cần ảnh asset:** `Bộ icon nét mảnh thanh lịch định dạng SVG cho thanh điều hướng: Icon Kính lúp tìm kiếm (icon-search) và Icon Tài khoản cá nhân (icon-user).`
+
+---
+
+### 4.2. Khối Mở Đầu (Hero Section)
+
+Khối Hero gồm bố cục 2 cột (Desktop) hoặc xếp chồng tự nhiên (Mobile), là trái tim truyền cảm hứng cho người học:
+
+#### Cột Trái: Cụm Nội Dung & Hành Động (Hero Content)
+- **Tiêu đề thương hiệu (H1):** `VieCultures` sử dụng phông chữ nghệ thuật `var(--font-heading)`, màu xanh di sản đậm hoặc nâu than mộc.
+- **Tagline chính:** *"Gom từng từ nhỏ, hiểu một Việt Nam lớn."* (Kích thước lớn, giàu chất văn học).
+- **Phụ đề (Sub-tagline):** *"Học tiếng Anh qua văn hóa Việt Nam"* (Giải thích trực diện giá trị sản phẩm).
+- **Nút hành động chính (Primary CTA):**
+  - Nhãn: `Bắt đầu khám phá →`
+  - Kiểu dáng: Bo tròn dạng viên thuốc (`border-radius: var(--radius-pill)`), nền xanh di sản đậm (`--color-primary-dark`), chữ trắng hoặc kem vàng, hiệu ứng hover nhấc nhẹ và phát sáng dịu.
+- **Widget tương tác nhanh (Widget Discover):**
+  - Khối nhỏ nổi bật hình chữ nhật bo tròn (`border-radius: var(--radius-md)`), nền kem giấy hoặc trắng ngà có bóng đổ mềm.
+  - Chứa hình thumbnail sách từ vựng cùng dòng chữ song ngữ: `Discover` / **Khám phá**.
+
+> **Cần ảnh asset:** `Icon Sổ từ vựng văn hóa thu nhỏ (assets/icon-book.webp) kích thước ~48x48px đến 64x64px, thể hiện quyển sổ mở ra nét vẽ hoa sen hoặc họa tiết dân gian mềm mại.`
+
+#### Cột Phải: Không Gian Thị Giác & Thi Pháp (Hero Visual)
+- **Câu danh ngôn thi pháp (Decorative Quote):**
+  - Nội dung: *"Small words, wonderful worlds"*
+  - Phông chữ: `var(--font-decorative)` ('Dancing Script', cursive), đặt bay bổng phía trên hoặc chếch góc tranh minh họa.
+- **Tranh minh họa chính (Hero Illustration):**
+  - Tác phẩm mỹ thuật trung tâm miêu tả người phụ nữ Việt Nam trong tà áo dài truyền thống và hoa sen thơm ngát, tỏa ra vẻ đẹp thanh thoát, thuần Việt.
+
+> **Cần ảnh asset:** `Bức tranh minh họa trung tâm Hero (assets/hero-illustration.webp) vẽ người phụ nữ Việt Nam tà áo dài bên hoa sen, màu sắc trang nhã đồng bộ cùng bảng màu kem ngà và xanh di sản, độ phân giải cao tối ưu hiển thị Desktop và Mobile.`
+
+---
+
+### 4.3. Chuyên Mục "Bốn Miền Khám Phá" (Explore Section)
+
+Khu vực dẫn dắt người dùng bước vào 4 trục nội dung cốt lõi của VieCultures:
+
+#### Tiêu đề Section (Section Header)
+- **Tiêu đề (H2):** `Bốn miền khám phá` (`var(--font-heading)`).
+- **Mô tả dẫn nhập:** *"Mỗi vùng đất một câu chuyện, mỗi từ vựng một góc nhìn Việt Nam."*
+
+#### Lưới Thẻ Chủ Đề (Topic Cards Grid - 4 Cột)
+Mỗi thẻ được thiết kế dạng khối chữ nhật đứng bo tròn góc (`border-radius: 16px`), nền `var(--bg-card)`, viền nhẹ `1px solid var(--divider-color)`, gồm:
+1. **Phần ảnh truyền cảm (Card Media):** Ảnh minh họa đại diện cho chủ đề, cắt cúp nghệ thuật tỷ lệ ~4:3.
+2. **Tiêu đề chuyên đề (H3):** Phông chữ `var(--font-heading)`, màu sắc đậm nét rõ ràng.
+3. **Nút hành động (Card Action):** Nút bo viền thanh lịch với nhãn `Khám phá →`.
+
+Chi tiết 4 thẻ chủ đề và asset cần có:
+
+#### Thẻ 1: Nếp sống & văn hóa
+- Nội dung: Các bài học về phong tục tập quán, nếp nhà, tình làng nghĩa xóm, phong cách sống đậm chất Việt.
+- Nút bấm: `Khám phá →`
+
+> **Cần ảnh asset:** `Ảnh minh họa chủ đề Nếp sống & văn hóa (assets/card-van-hoa.webp) thể hiện cảnh sinh hoạt mộc mạc, mái đình, nếp nhà xưa hoặc chén trà đầu làng.`
+
+#### Thẻ 2: Truyền thuyết
+- Nội dung: Kho tàng thần thoại, truyền thuyết dân gian (Sơn Tinh Thủy Tinh, Lạc Long Quân - Âu Cơ, Thánh Gióng, Bánh chưng bánh giầy) song ngữ Anh - Việt.
+- Nút bấm: `Khám phá →`
+
+> **Cần ảnh asset:** `Ảnh minh họa chủ đề Truyền thuyết (assets/card-truyen-thuyet.webp) phong cách huyền sử, hào khí dân gian giàu tính biểu tượng.`
+
+#### Thẻ 3: Ẩm thực
+- Nội dung: Tinh hoa văn hóa ẩm thực Việt, phong vị 3 miền, tên gọi nguyên liệu và cách thưởng thức bằng tiếng Anh.
+- Nút bấm: `Khám phá →`
+
+> **Cần ảnh asset:** `Ảnh minh họa chủ đề Ẩm thực (assets/card-am-thuc.webp) khắc họa các món ăn truyền thống thanh nhã (bát phở bốc khói, mâm cơm gia đình, hương vị cốm non).`
+
+#### Thẻ 4: Lễ hội & sắc màu
+- Nội dung: Những ngày hội rực rỡ, sắc màu truyền thống (Tết Nguyên Đán, Hội Lim, Lễ hội Đền Hùng, Hội thả đèn hoa đăng).
+- Nút bấm: `Khám phá →`
+
+> **Cần ảnh asset:** `Ảnh minh họa chủ đề Lễ hội & sắc màu (assets/card-le-hoi.webp) ngập tràn sắc thái vui tươi, đèn hoa đăng, cờ hội truyền thống hoặc tà áo tứ thân trẩy hội.`
+
+---
+
+## 5. Bảng Tổng Hợp Danh Mục Asset Cần Bổ Sung (Asset Checklist)
+
+Để phục vụ lập trình giao diện và hiển thị trọn vẹn bản sắc thương hiệu, đội ngũ thiết kế cần cung cấp các file asset theo danh sách chuẩn hóa dưới đây:
+
+| STT | Đường dẫn file dự kiến | Miêu tả chi tiết hình ảnh asset | Kích thước / Tỷ lệ kiến nghị | Định dạng | Trạng thái hiện tại |
+| :---: | :--- | :--- | :--- | :---: | :---: |
+| **1** | `assets/logo-viecultures.png` | Logo thương hiệu VieCultures nền trong suốt, kết hợp biểu tượng & chữ | Chiều cao `40px - 60px` | PNG / SVG | ⚠️ Cần bổ sung (`assets/logo-viecultures.png.html`) |
+| **2** | `assets/icon-book.webp` | Icon cuốn sổ tay mở / sổ từ vựng cho Widget "Discover" | `64x64px` hoặc `128x128px` (1:1) | WebP / SVG | ⚠️ Cần bổ sung (`assets/icon-book.webp.html`) |
+| **3** | `assets/hero-illustration.webp` | Tranh nghệ thuật chủ đạo: Người phụ nữ Việt Nam và hoa sen, phong cách nhã nhặn | `800x600px` hoặc `1200x900px` (4:3 / 16:9) | WebP | ⚠️ Cần bổ sung (`assets/hero-illustration.webp.html`) |
+| **4** | `assets/card-van-hoa.webp` | Bìa thẻ chuyên đề "Nếp sống & văn hóa" (Sinh hoạt, phong tục, làng quê) | `600x450px` (4:3) | WebP | ⚠️ Cần bổ sung (`assets/card-van-hoa.webp.html`) |
+| **5** | `assets/card-truyen-thuyet.webp` | Bìa thẻ chuyên đề "Truyền thuyết" (Thần thoại, huyền sử tích xưa Việt Nam) | `600x450px` (4:3) | WebP | ⚠️ Cần bổ sung (`assets/card-truyen-thuyet.webp.html`) |
+| **6** | `assets/card-am-thuc.webp` | Bìa thẻ chuyên đề "Ẩm thực" (Mâm cơm Việt, phở, hương vị truyền thống) | `600x450px` (4:3) | WebP | ⚠️ Cần bổ sung (`assets/card-am-thuc.webp.html`) |
+| **7** | `assets/card-le-hoi.webp` | Bìa thẻ chuyên đề "Lễ hội & sắc màu" (Hội làng, đèn lồng, sắc hoa lễ tết) | `600x450px` (4:3) | WebP | ⚠️ Cần bổ sung (`assets/card-le-hoi.webp.html`) |
+| **8** | `assets/icons/*.svg` | Cặp icon chức năng nét mảnh: Kính lúp (`icon-search`) & Người dùng (`icon-user`) | `24x24px` viewport | SVG | ⚠️ Cần bổ sung |
+
+### Quy Chuẩn Xử Lý Asset Khi Chưa Có File (Placeholder Rule)
+
+> [!IMPORTANT]
+> **Tuyệt đối tuân thủ:**
+> 1. **Không tự ý tìm kiếm ảnh ngẫu nhiên trên mạng** hoặc tự sinh ảnh sai lệch với phong cách di sản.
+> 2. **Nếu chưa có file asset chính thức:** Tạo file placeholder định dạng đúng tên + đuôi `.html` (Ví dụ: `assets/card-van-hoa.webp.html`), hiển thị khối chữ nhật màu nền xám mộc (`#E5E7EB` / `#F3F4F6`), ghi rõ nhãn "Cần ảnh asset: `miêu tả asset`".
+> 3. Trên giao diện frontend (React): Hiển thị khung placeholder nền xám chuẩn (`bg-[#E5E7EB]` hoặc `bg-[#F6EEDC]`), có icon biểu trưng và nhãn mô tả file asset cần bổ sung để người phụ trách dễ dàng nhận diện và bổ sung file `.webp` sau này.
+
+---
+
+## 6. Khung Mã Nguồn Giao Diện Triển Khai (Implementation Reference)
+
+### 6.1. Cấu Trúc HTML Chuẩn (HTML5 Semantic Wireframe)
+
+```html
+<main class="landing-page">
+  
+  <!-- 1. Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo-viecultures.png" alt="VieCultures Logo" />
+      <span class="slogan">Khắc ghi nguồn cội, gìn giữ văn hóa</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#kham-pha">Khám phá</a>
+      <a href="#tu-vung">Từ vựng</a>
+      <a href="#so-tay">Sổ tay của tôi</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn-icon" aria-label="Tìm kiếm"><i class="icon-search"></i></button>
+      <button class="btn-icon" aria-label="Tài khoản"><i class="icon-user"></i></button>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-brand">VieCultures</h1>
+      <p class="tagline">Gom từng từ nhỏ, hiểu một Việt Nam lớn.</p>
+      <p class="sub-tagline">Học tiếng Anh qua văn hóa Việt Nam</p>
+      <a href="#bat-dau" class="btn-cta">Bắt đầu khám phá &rarr;</a>
+      
+      <!-- Widget Discover -->
+      <div class="widget-discover">
+        <img src="assets/icon-book.webp" alt="Sổ từ vựng" class="widget-thumb" />
+        <div class="widget-text">
+          <span>Discover</span>
+          <strong>Khám phá</strong>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <span class="quote-decorative">Small words, wonderful worlds</span>
+      <img src="assets/hero-illustration.webp" alt="Minh họa người phụ nữ Việt Nam và hoa sen" class="hero-img" />
+    </div>
+  </section>
+
+  <!-- 3. Section: Bốn miền khám phá -->
+  <section class="explore-section" id="kham-pha">
+    <div class="section-header">
+      <h2>Bốn miền khám phá</h2>
+      <p>Mỗi vùng đất một câu chuyện, mỗi từ vựng một góc nhìn Việt Nam.</p>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <article class="topic-card">
+        <div class="card-media">
+          <img src="assets/card-van-hoa.webp" alt="Nếp sống & văn hóa" />
+        </div>
+        <h3>Nếp sống & văn hóa</h3>
+        <button class="btn-card">Khám phá &rarr;</button>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="topic-card">
+        <div class="card-media">
+          <img src="assets/card-truyen-thuyet.webp" alt="Truyền thuyết" />
+        </div>
+        <h3>Truyền thuyết</h3>
+        <button class="btn-card">Khám phá &rarr;</button>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="topic-card">
+        <div class="card-media">
+          <img src="assets/card-am-thuc.webp" alt="Ẩm thực" />
+        </div>
+        <h3>Ẩm thực</h3>
+        <button class="btn-card">Khám phá &rarr;</button>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="topic-card">
+        <div class="card-media">
+          <img src="assets/card-le-hoi.webp" alt="Lễ hội & sắc màu" />
+        </div>
+        <h3>Lễ hội & sắc màu</h3>
+        <button class="btn-card">Khám phá &rarr;</button>
+      </article>
+    </div>
+  </section>
+
+</main>
+```
+
+### 6.2. Bộ Khung CSS Tham Khảo (CSS Reference Stylesheet)
 
 ```css
 /* ==========================================================================
-   1. GOOGLE FONTS CAO CẤP DÙNG CHUNG
+   GOOGLE FONTS
    ========================================================================== */
-@import url("[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap)");
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap');
 
 /* ==========================================================================
-   2. HỆ BIẾN THIẾT KẾ TOÀN TRANG (GLOBAL TOKENS)
+   RESET & BASE TOKENS
    ========================================================================== */
 :root {
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body:
-    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-primary: #fbf7ee;
+  --bg-secondary: #f6eedc;
+  --bg-banner: #bfe3ea;
+  --bg-card: #fdfbf7;
+  --bg-card-sub: #9fced8;
 
-  /* Chuẩn bo tròn hạt đậu / viên thuốc (Pill Shape) */
+  --color-primary: #3d6e70;
+  --color-primary-dark: #1e4b43;
+  --color-teal-mountain: #6e9fa1;
+  --color-accent-gold: #d9b76a;
+  --color-accent-pink: #e8b7b2;
+  --color-accent-red: #a33b2e;
+  --divider-color: #e8dfcb;
+
+  --text-main: #2c2523;
+  --text-muted: #6b635b;
+  --text-on-dark: #ffffff;
+
+  --font-heading: 'Playfair Display', 'Lora', Georgia, serif;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+  --font-decorative: 'Dancing Script', cursive;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-pill: 9999px;
-  --radius-card: 16px;
-
-  /* Hiệu ứng chuyển động mượt */
+  --shadow-soft: 0 4px 20px rgba(30, 75, 67, 0.08);
+  --shadow-card: 0 6px 24px rgba(44, 37, 35, 0.06);
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   3. THEME TRANG CHỦ (CHUẨN FORM ẢNH 88D)
-   ========================================================================== */
-body[data-theme="home"] {
-  /* Màu sắc chủ đạo */
-  --btn-primary-bg: #fce5b5;
-  --btn-primary-text: #18221e;
-  --btn-primary-hover: #fff0ce;
-
-  --btn-glass-bg: rgba(18, 42, 34, 0.65);
-  --btn-glass-text: #ffffff;
-  --btn-glass-border: rgba(255, 255, 255, 0.25);
-  --btn-glass-hover: rgba(26, 60, 48, 0.85);
-
-  --pill-tag-bg: rgba(0, 0, 0, 0.45);
-  --pill-tag-text: #f5e8c7;
-  --pill-tag-border: rgba(255, 255, 255, 0.15);
-
-  --text-hero-main: #ffffff;
-  --text-hero-sub: #f7e5c3;
-  --text-hero-desc: rgba(255, 255, 255, 0.85);
-}
-
-/* ==========================================================================
-   4. CÁC LINH KIỆN GIAO DIỆN HIỆN ĐẠI (COMPONENTS)
-   ========================================================================== */
-
-/* Khối nhãn nhỏ trên tiêu đề (Pill Tag) */
-.glass-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  background-color: var(--pill-tag-bg);
-  border: 1px solid var(--pill-tag-border);
-  border-radius: var(--radius-pill);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--pill-tag-text);
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
   font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin-bottom: 24px;
+  line-height: 1.6;
 }
 
-.glass-pill-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #e27941; /* Điểm cam đất nhấn nhẹ */
-}
-
-/* Cụm Tiêu Đề Hero (Không dùng hộp bao quanh) */
-.hero-title-group {
-  max-width: 680px;
-  margin-bottom: 32px;
-}
-
-.hero-logo-tag {
+/* ==========================================================================
+   1. NAVBAR
+   ========================================================================== */
+.navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  padding: 16px 48px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--divider-color);
 }
 
-.hero-logo-box {
-  display: inline-block;
-  background-color: #a13225; /* Đỏ son mộc bản */
-  color: #ffffff;
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 3px;
-  line-height: 1.1;
-  text-align: center;
-}
-
-.hero-brand-name {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-hero-main);
-  letter-spacing: -0.01em;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
-}
-
-.hero-main-heading {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--text-hero-main);
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
-  margin-bottom: 8px;
-}
-
-.hero-main-subheading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--text-hero-sub);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
-}
-
-.hero-description {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--text-hero-desc);
-  max-width: 580px;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-  margin-bottom: 36px;
-}
-
-/* Cụm Nút Bấm Đôi Chuẩn 88d */
-.hero-btn-group {
+.logo {
   display: flex;
   align-items: center;
   gap: 16px;
-  flex-wrap: wrap;
 }
 
-/* Nút Chính (Màu Kem Nắng Ấm) */
-.btn-pill-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 13px 30px;
-  border-radius: var(--radius-pill);
+.logo img {
+  height: 42px;
+  object-fit: contain;
+}
+
+.logo .slogan {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  border-left: 1px solid var(--divider-color);
+  padding-left: 14px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
   text-decoration: none;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transition: var(--transition-smooth);
-}
-
-.btn-pill-primary:hover {
-  background-color: var(--btn-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(252, 229, 181, 0.35);
-}
-
-/* Nút Phụ (Kính Mờ Đen Rêu) */
-.btn-pill-glass {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: var(--btn-glass-bg);
-  color: var(--btn-glass-text);
-  border: 1px solid var(--btn-glass-border);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  color: var(--text-main);
   font-weight: 500;
-  padding: 13px 28px;
-  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+  color: var(--color-primary-dark);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-icon {
+  background: transparent;
+  border: 1px solid var(--divider-color);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+}
+
+.btn-icon:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--color-accent-gold);
+}
+
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero-brand {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 8px;
+}
+
+.sub-tagline {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0 0 32px;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary-dark);
+  color: var(--text-on-dark);
   text-decoration: none;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+}
+
+.btn-cta:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 75, 67, 0.2);
+}
+
+.widget-discover {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+  padding: 10px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--divider-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.widget-thumb {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.widget-text span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.widget-text strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-primary-dark);
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-decorative {
+  font-family: var(--font-decorative);
+  font-size: 1.85rem;
+  color: var(--color-accent-gold);
+  margin-bottom: -16px;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   3. EXPLORE SECTION ("BỐN MIỀN KHÁM PHÁ")
+   ========================================================================== */
+.explore-section {
+  padding: 80px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  color: var(--color-primary-dark);
+  margin: 0 0 10px;
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.topic-card {
+  background: var(--bg-card);
+  border: 1px solid var(--divider-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(44, 37, 35, 0.1);
+  border-color: var(--color-accent-gold);
+}
+
+.card-media {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.topic-card:hover .card-media img {
+  transform: scale(1.05);
+}
+
+.topic-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.btn-card {
+  align-self: flex-start;
+  background: transparent;
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-dark);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition-smooth);
 }
 
-.btn-pill-glass:hover {
-  background-color: var(--btn-glass-hover);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
+.btn-card:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--text-on-dark);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+    gap: 32px;
+  }
+
+  .navbar {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo .slogan {
+    display: none;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 ```
