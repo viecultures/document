@@ -8,10 +8,9 @@ _English Learning Platform via Vietnamese Cultural Identity_
 
 - **Slide Title**: VieCultures – Engrave words, preserve culture
 - **Subtitle**: Next-Generation EdTech Platform for Contextual English Learning through Vietnamese Heritage
-- **Visual Suggestion**: Logo VieCultures alongside heritage colors (Heritage Jade & Parchment Cream) with a warm editorial visual layout.
 - **Key Points**:
   - **Team**: VieC
-  - **Tagline**: \_"Engrave words, preserve culture"
+  - **Tagline**: _"Engrave words, preserve culture"
   - **Team Members & Roles**:
     - `Trần Nguyễn Minh Bảo` – International Business
     - `Ninh Thiện Luân` – Software Engineer
@@ -25,7 +24,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 2: Problem Statement
 
 - **Slide Title**: The Problem: Disconnect & Anxiety in Language Learning
-- **Visual Suggestion**: Two contrasting icons: one showing traditional textbook stress vs. one showing culturally relevant storytelling.
 - **Key Points**:
   - **Contextual Disconnect**: Traditional English platforms rely heavily on Western topics or generic prompts, making vocabulary retention feel abstract and uninspiring for Vietnamese learners.
   - **Inability to Express Local Culture**: Learners struggle to articulate Vietnamese customs, landmarks, cuisine, and history in academic English.
@@ -36,7 +34,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 3: Proposed Solution - VieCultures
 
 - **Slide Title**: The Solution: Cultural Storytelling Meets EdTech
-- **Visual Suggestion**: Product screenshot / mockup showing the 4 core pillars of VieCultures.
 - **Key Points**:
   - **Bilingual Paragraph-Paired Reader**: Academic English reading matched 1-to-1 with Vietnamese translation for clear contextual understanding.
   - **Native AI Shadowing Audio**: Audio player per sentence to build shadowing habits and pronunciation accuracy.
@@ -48,7 +45,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 4: Why This Idea? (Innovation & Uniqueness)
 
 - **Slide Title**: Why VieCultures? Heritage, Technology & Empathy
-- **Visual Suggestion**: 3 pillars graphic showing Cultural Pride, Tech Integration, and Psychological Safety.
 - **Key Points**:
   - **Cultural Pride as Motivation**: Learning becomes self-driven when content touches familiar heritage, myths, cuisine, and lifestyle.
   - **Context-First Methodology**: Vocabulary is never isolated—words are extracted with original context sentences, IPA, and audio.
@@ -60,7 +56,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 5: Market Overview & Target Audience
 
 - **Slide Title**: Market Opportunity & Target Users
-- **Visual Suggestion**: Target user persona infographic alongside market growth indicators.
 - **Key Points**:
   - **Target Audience**:
     - University students & young professionals (A2 - C1 CEFR) aiming for IELTS/TOEIC reading skills and natural fluency.
@@ -74,7 +69,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 6: How Could It Work? (User Journey & Stakeholders)
 
 - **Slide Title**: Product Workflow & Ecosystem
-- **Visual Suggestion**: Step-by-step user journey flow diagram (5 steps).
 - **Key Points**:
   - **5-Step Learning Journey**:
     1. **Explore**: Filter by Cultural Topic (Cuisine, Legends, Lifestyle, Festivals) & CEFR Level.
@@ -89,7 +83,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 7: Business Potential & Monetization
 
 - **Slide Title**: Business Model & Revenue Strategy
-- **Visual Suggestion**: Revenue streams breakdown icon chart.
 - **Key Points**:
   - **Freemium & Display Ads**: Non-intrusive targeted ads for free-tier users.
   - **Affiliate Marketing**: Strategic partnerships with cultural tourism providers, local travel tours, heritage workshops, and English learning books.
@@ -102,7 +95,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 8: Scalability & Long-Term Vision
 
 - **Slide Title**: Growth Potential & Future Expansion
-- **Visual Suggestion**: Roadmap timeline from Web MVP to Global Ecosystem.
 - **Key Points**:
   - **Mobile Native App (iOS/Android)**: Porting Web MVP to PWA/Mobile Native for push notifications on Spaced Repetition cycles.
   - **Reverse Culture Mode (Inbound Tourism)**: Teaching Vietnamese language & pronunciation to foreign travelers using English explanations.
@@ -113,7 +105,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 9: From Idea to Company (Mission & Organization)
 
 - **Slide Title**: Mission, Vision & Organization Structure
-- **Visual Suggestion**: Organizational structure chart with team roles.
 - **Key Points**:
   - **Vision**: To become the leading culture-integrated language learning platform in Vietnam.
   - **Mission**: Empowering Vietnamese learners to master English while preserving and celebrating cultural identity.
@@ -128,7 +119,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 10: Next Steps & Immediate Roadmap (Post-CP1)
 
 - **Slide Title**: Immediate Milestones (Post-CP1 Execution)
-- **Visual Suggestion**: Gantt chart / Milestone timeline for Checkpoint 2 and MVP launch.
 - **Key Points**:
   - **Phase 1 (Current - CP1)**: Concept validation, UI design system, technical architecture & documentation.
   - **Phase 2 (CP2 Prep)**: Complete Web MVP implementation (Bilingual Reader, Tooltip Vocab, Flashcard SRS engine, Reflection Feed).
@@ -140,7 +130,6 @@ _English Learning Platform via Vietnamese Cultural Identity_
 ## Slide 11: Conclusion & Q&A
 
 - **Slide Title**: Preserving Heritage, Empowering Learners
-- **Visual Suggestion**: High-impact closing visual featuring VieCultures slogan & contact details.
 - **Key Points**:
   - **VieCultures**: _Small words, wonderful worlds._
   - Learning English is no longer foreign—it is a journey of honoring our roots and connecting Vietnam to the world.

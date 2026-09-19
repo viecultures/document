@@ -8,7 +8,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 
 - **Tiêu đề Slide**: VieCultures – Khắc ghi ngôn từ, gìn giữ văn hóa
 - **Phụ đề**: Nền tảng EdTech thế hệ mới giúp học tiếng Anh theo ngữ cảnh qua di sản văn hóa Việt Nam
-- **Gợi ý Visual**: Logo VieCultures cùng bảng màu di sản (Xanh di sản đậm & Kem ngà giấy dó) với phong cách tạp chí ấm áp.
 - **Ý chính**:
   - **Tên Nhóm**: VieC
   - **Tagline**: Engrave words, preserve culture Khắc ghi ngôn từ, gìn giữ văn hóa
@@ -25,7 +24,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 2: Vấn đề Nghiệp vụ (Problem Statement)
 
 - **Tiêu đề Slide**: Vấn đề: Sự rời rạc ngữ cảnh & Rào cản tâm lý khi học ngoại ngữ
-- **Gợi ý Visual**: Hình ảnh đối lập giữa áp lực học sách giáo khoa truyền thống vs. nghệ thuật kể chuyện văn hóa gần gũi.
 - **Ý chính**:
   - **Rời rạc Ngữ cảnh (Contextual Disconnect)**: Các ứng dụng học tiếng Anh hiện tại phụ thuộc nhiều vào chủ đề phương Tây hoặc đề tài chung chung, khiến từ vựng trở nên trừu tượng, khó ghi nhớ với người Việt.
   - **Thiếu khả năng diễn đạt Văn hóa nội địa**: Người học gặp khó khăn khi muốn giới thiệu phong tục, danh lam thắng cảnh, ẩm thực, lịch sử Việt Nam bằng tiếng Anh chuẩn học thuật.
@@ -36,7 +34,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 3: Giải pháp Đề xuất - VieCultures
 
 - **Tiêu đề Slide**: Giải pháp: Kể chuyện Văn hóa kết hợp Công nghệ EdTech
-- **Gợi ý Visual**: Ảnh chụp giao diện / Mockup mô phỏng 4 trụ cột cốt lõi của VieCultures.
 - **Ý chính**:
   - **Đọc Bài Song ngữ Cặp Đoạn (Paragraph-Paired Reader)**: Bài đọc tiếng Anh học thuật đi kèm đoạn dịch tiếng Việt song song khớp 1-1 giúp hiểu ngữ cảnh nhanh chóng.
   - **Âm thanh AI Shadowing**: Trình phát âm thanh theo từng câu giúp luyện nghe và nhại giọng (shadowing) chuẩn bản xứ.
@@ -48,7 +45,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 4: Tại sao chọn Ý tưởng này? (Tính Đổi mới & Độc đáo)
 
 - **Tiêu đề Slide**: Tại sao lại là VieCultures? Di sản, Công nghệ & Sự Thấu hiểu
-- **Gợi ý Visual**: Đồ họa 3 trụ cột thể hiện Niềm tự hào Văn hóa, Tích hợp Công nghệ & Sự An tâm Tâm lý.
 - **Ý chính**:
   - **Tự hào Văn hóa là Động lực**: Việc học trở nên tự giác khi nội dung chạm đến di sản, truyền thuyết, ẩm thực và nếp sống quen thuộc.
   - **Phương pháp Ngữ cảnh là Số 1**: Từ vựng không bao giờ đứng độc lập—mỗi từ luôn đi kèm câu ngữ cảnh gốc, phiên âm IPA và file âm thanh chuẩn.
@@ -60,7 +56,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 5: Tổng quan Thị trường & Đối tượng Mục tiêu
 
 - **Tiêu đề Slide**: Cơ hội Thị trường & Khách hàng Mục tiêu
-- **Gợi ý Visual**: Biểu đồ Chân dung người dùng mục tiêu (Persona) đi kèm chỉ số tăng trưởng thị trường EdTech.
 - **Ý chính**:
   - **Khách hàng Mục tiêu**:
     - Sinh viên đại học & người đi làm trẻ (CEFR A2 - C1) muốn nâng cao kỹ năng đọc IELTS/TOEIC và phản xạ giao tiếp tự nhiên.
@@ -74,7 +69,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 6: Phương thức Hoạt động (Luồng Trải nghiệm & Stakeholders)
 
 - **Tiêu đề Slide**: Quy trình Trải nghiệm Sản phẩm & Hệ sinh thái
-- **Gợi ý Visual**: Sơ đồ luồng trải nghiệm 5 bước của người dùng.
 - **Ý chính**:
   - **Luồng Trải nghiệm 5 bước**:
     1. **Khám phá (Explore)**: Lọc bài học theo Chủ đề văn hóa (Ẩm thực, Truyền thuyết, Nếp sống, Lễ hội) & Cấp độ CEFR.
@@ -90,7 +84,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 7: Tiềm năng Kinh doanh & Mô hình Doanh thu
 
 - **Tiêu đề Slide**: Mô hình Kinh doanh & Chiến lược Doanh thu
-- **Gợi ý Visual**: Biểu đồ phân bổ các nguồn thu nhập của hệ thống.
 - **Ý chính**:
   - **Quảng cáo Hiển thị (Display Ads)**: Quảng cáo banner không gây phiền cho người dùng bản miễn phí.
   - **Tiếp thị Liên kết (Affiliate Marketing)**: Hợp tác với các đơn vị tour du lịch văn hóa, hội thảo di sản, sách văn hóa và khóa học tiếng Anh chuyên sâu.
@@ -103,7 +96,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 8: Khả năng Mở rộng & Tầm nhìn Lớn
 
 - **Tiêu đề Slide**: Tiềm năng Tăng trưởng & Mở rộng Tương lai
-- **Gợi ý Visual**: Lộ trình phát triển từ Web MVP đến Hệ sinh thái Toàn cầu.
 - **Ý chính**:
   - **Ứng dụng Di động (Mobile Native App)**: Chuyển đổi Web MVP sang app di động để đẩy thông báo nhắc ôn tập theo chu kỳ Spaced Repetition.
   - **Chế độ Học Ngược (Inbound Tourism)**: Dạy tiếng Việt và phát âm tên riêng/từ ngữ Việt Nam cho khách du lịch nước ngoài bằng tiếng Anh.
@@ -114,7 +106,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 9: Từ Ý tưởng đến Công ty (Sứ mệnh & Tổ chức)
 
 - **Tiêu đề Slide**: Tầm nhìn, Sứ mệnh & Sơ đồ Tổ chức Nhóm
-- **Gợi ý Visual**: Sơ đồ phân công vai trò trách nhiệm của nhóm.
 - **Ý chính**:
   - **Tầm nhìn (Vision)**: Trở thành nền tảng học ngôn ngữ tích hợp văn hóa hàng đầu tại Việt Nam.
   - **Sứ mệnh (Mission)**: Giúp người Việt làm chủ tiếng Anh đồng thời giữ gìn và lan tỏa bản sắc văn hóa dân tộc.
@@ -128,7 +119,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 10: Các Bước Tiếp Theo & Lộ trình Hành động (Post-CP1)
 
 - **Tiêu đề Slide**: Cột mốc Tiếp theo (Kế hoạch Sau CP1)
-- **Gợi ý Visual**: Biểu đồ Gantt / Lộ trình cột mốc chuẩn bị cho CP2 và ra mắt MVP.
 - **Ý chính**:
   - **Giai đoạn 1 (Hiện tại - CP1)**: Xung đột ý tưởng, chuẩn bị thiết kế UI, kiến trúc kỹ thuật & hoàn thiện tài liệu.
   - **Giai đoạn 2 (Chuẩn bị CP2)**: Hoàn thiện Web MVP (Bộ đọc song ngữ, Popup Từ vựng, Flashcard SRS, Dòng thời gian Reflection).
@@ -140,7 +130,6 @@ _Nền tảng Học Tiếng Anh qua Bản sắc Văn hóa Việt Nam_
 ## Slide 11: Kết luận & Hỏi Đáp (Q&A)
 
 - **Tiêu đề Slide**: Gìn giữ Di sản, Nâng tầm Người học
-- **Gợi ý Visual**: Hình ảnh kết bài ấn tượng kèm Tagline VieCultures & Thông tin liên hệ.
 - **Ý chính**:
   - **VieCultures**: _Gom từng từ nhỏ, hiểu một Việt Nam lớn._
   - Học tiếng Anh không còn xa lạ—đó là hành trình tôn vinh nguồn cội và kết nối Việt Nam ra thế giới.
