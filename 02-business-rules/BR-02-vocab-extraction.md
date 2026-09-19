@@ -16,12 +16,19 @@ Quy định phương pháp trích xuất, cấu trúc dữ liệu và điều ki
 - **Quy tắc 2.2.2**: **Cấm tuyệt đối** lưu trữ một từ vựng độc lập mà không có câu ngữ cảnh gốc. Nếu thiếu câu ngữ cảnh gốc, hệ thống coi dữ liệu từ vựng đó là **không hợp lệ** và không cho phép xuất bản lên ứng dụng.
 
 ### BR-02.3: Các Trường Dữ Liệu Thành Phần Của Từ Vựng (Vocab Entity Attributes)
-Một thực thể từ vựng hợp lệ phải bao gồm đầy đủ 5 thành phần dữ liệu sau:
+Một thực thể từ vựng hợp lệ phải bao gồm đầy đủ các thành phần dữ liệu sau:
 1. `word`: Từ gốc (ví dụ: *Architectural*).
 2. `ipa`: Phiên âm quốc tế IPA (ví dụ: */ˌɑːrkɪˈtektʃərəl/*).
 3. `pos`: Từ loại (ví dụ: *adj.*).
 4. `vi_meaning`: Nghĩa tiếng Việt trong ngữ cảnh bài học (ví dụ: *thuộc về kiến trúc*).
 5. `context_sentence`: Nguyên văn câu chứa từ trong bài đọc (ví dụ: *"The citadel displays unique architectural features of the Nguyen Dynasty."*).
+6. `category`: Danh mục chủ đề văn hóa (ví dụ: *Cuisine, History, Heritage, Architecture, Festival, Daily Life*).
+
+### BR-02.4: Phân Loại Từ Vựng Theo Chủ Đề & Liên Kết 2 Chiều (Topical Vocab & Bi-directional Links)
+- **Quy tắc 2.4.1**: Mọi từ vựng (`VocabItem`) phải được gán vào ít nhất 1 Danh mục chủ đề văn hóa (`VocabCategory`).
+- **Quy tắc 2.4.2**: Hệ thống phải hỗ trợ liên kết 2 chiều giữa Từ vựng và Bài đọc:
+  - Từ màn hình Bài đọc $\rightarrow$ Nhấp từ vựng để mở chi tiết từ và thêm vào bộ sưu tập cá nhân.
+  - Từ màn hình Bộ từ vựng theo chủ đề $\rightarrow$ Nhấp nút *"Xem bài đọc liên quan"* để quay lại bài đọc gốc chứa từ vựng đó.
 
 ---
 
@@ -34,7 +41,9 @@ Một thực thể từ vựng hợp lệ phải bao gồm đầy đủ 5 thành
   "ipa": "/ˌɑːrkɪˈtektʃərəl/",
   "pos": "adj",
   "vi_meaning": "thuộc kiến trúc",
+  "category": "Architecture",
   "context_sentence": "The citadel displays unique architectural features of the Nguyen Dynasty.",
+  "related_post_ids": ["read_hue_citadel_01"],
   "audio_url": "https://cdn.vnculturereader.com/audio/vocab/architectural.mp3"
 }
 ```
@@ -43,7 +52,6 @@ Một thực thể từ vựng hợp lệ phải bao gồm đầy đủ 5 thành
 
 ## 4. Tác Động Đến Các Bộ Phận (Cross-Functional Impact)
 
-- 🤖 **AI Agent / Backend**: Khi xử lý tự động bài đọc mới, pipeline của AI phải thực hiện 2 bước: 
-  1. Detect từ vựng khó.
-  2. Bắt cặp chính xác câu chứa từ đó trong bài (`context_sentence`).
-- 🎨 **Frontend / UI**: Trên giao diện bài đọc, các từ vựng học thuật sẽ được gạch chân hoặc highlight nhẹ. Khi người dùng bấm/hover vào từ, một popup nhỏ (Tooltip Card) sẽ xuất hiện hiển thị đầy đủ thông tin từ vựng và câu ngữ cảnh.
+- 🤖 **AI Agent / Backend**: Khi xử lý bài đọc mới, tự động phân loại từ vựng vào đúng `category` chủ đề và thiết lập liên kết `related_post_ids`.
+- 🎨 **Frontend / UI**: Xây dựng trang "Từ vựng theo chủ đề" (Ẩm thực, Du lịch, Di sản...) cho phép học viên tra cứu bộ từ vựng kèm link dẫn tới các bài đọc sử dụng từ đó.
+
