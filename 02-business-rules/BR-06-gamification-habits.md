@@ -8,7 +8,7 @@
 ---
 
 ## 1. Mục Đích & Phạm Vi
-Quy định cơ chế game hóa (Gamification), đếm chuỗi ngày học liên tiếp (Streak), tính điểm kinh nghiệm (EXP), bảng xếp hạng tuần và thử thách cộng đồng cho ứng dụng **VN Culture Reader**.
+Quy định cơ chế game hóa (Gamification), đếm chuỗi ngày học liên tiếp (Streak), tính điểm kinh nghiệm (EXP), bảng xếp hạng tuần và thử thách cộng đồng cho nền tảng **VieCultures** (thuộc giai đoạn mở rộng sau khi hoàn thành và kiểm chứng bản Web MVP cốt lõi).
 
 ---
 

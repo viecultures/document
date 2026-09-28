@@ -6,6 +6,8 @@ Tài liệu quy định cấu trúc dữ liệu, các thực thể (Entities), t
 
 ## 1. Sơ Đồ Thực Thể Quan Hệ (ERD Concept)
 
+> Xem sơ đồ thực thể quan niệm tổng thể (Conceptual Data Model - không thuộc tính) tại: [conceptual-diagram.md](../conceptual-diagram.md) | File Mermaid: [conceptual-diagram.mmd](../conceptual-diagram.mmd)
+
 ```mermaid
 erDiagram
     ReadingPost ||--|{ ParagraphPair : contains

@@ -1,7 +1,7 @@
 # 🛠️ Quy Trình Quản Lý Nội Dung & Trang Web Admin (CMS & Admin Specs)
 
 ## 1. Tổng Quan Trang Web Admin
-Hệ thống cung cấp trang quản trị Web Admin cho phép Quản trị viên (Admin) và Biên tập viên cấu hình, nhập liệu và quản lý toàn bộ bài học trên nền tảng **VN Culture Reader**.
+Hệ thống cung cấp trang quản trị Web Admin cho phép Quản trị viên (Admin) và Biên tập viên cấu hình, nhập liệu và quản lý toàn bộ bài học trên nền tảng **VieCultures**.
 
 ---
 
