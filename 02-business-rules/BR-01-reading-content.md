@@ -2,7 +2,7 @@
 
 ## 1. Mục Đích & Phạm Vi
 
-Quy định cấu trúc dữ liệu, phân loại bài học và luồng âm thanh AI Shadowing trên nền tảng VN Culture Reader.
+Quy định cấu trúc dữ liệu, phân loại bài học và luồng âm thanh AI Shadowing trên nền tảng **VieCultures**.
 
 ---
 

@@ -1,0 +1,43 @@
+erDiagram
+    %% ========================================================
+    %% VIE CULTURES - CONCEPTUAL DATA MODEL (ENTITY-ONLY)
+    %% Sơ đồ Thực thể Quan niệm (Không thuộc tính)
+    %% Căn chỉnh theo Checkpoint 1 (CP1) & Lộ trình MVP
+    %% ========================================================
+
+    %% 1. Phân quyền & Người dùng (Identity & Access)
+    Role ||--o{ User : "assigns"
+    User ||--o| DailyStreak : "maintains"
+    User ||--o{ UserBadge : "earns"
+    Badge ||--o{ UserBadge : "awards"
+    User ||--o{ LeaderboardRanking : "ranks"
+    User ||--o{ UserLessonProgress : "tracks"
+    User ||--o{ UserVocabProgress : "masters"
+    User ||--o{ FlashcardSession : "conducts"
+    User ||--o{ UserReflection : "writes"
+    User ||--o{ Reaction : "gives"
+    User ||--o{ Report : "submits"
+
+    %% 2. Nội dung bài đọc & Địa lý văn hóa (Content & Regional Discovery)
+    Region ||--o{ ReadingPost : "originates"
+    Topic ||--|{ ReadingPost : "categorizes"
+    Topic ||--o{ VocabCategory : "groups"
+    ReadingPost ||--|{ ParagraphPair : "contains"
+    ParagraphPair ||--|{ Sentence : "divides_into"
+    ReadingPost ||--o{ VocabItem : "extracts"
+    ReadingPost ||--o{ UserLessonProgress : "records"
+    ReadingPost ||--o{ UserReflection : "inspires"
+
+    %% 3. Từ vựng học thuật ngữ cảnh (Contextual Vocabulary)
+    Sentence ||--o{ VocabItem : "contextualizes"
+    VocabCategory ||--o{ VocabItem : "classifies"
+    VocabItem ||--o{ UserVocabProgress : "evaluates"
+    VocabItem }o--o{ UserReflection : "references"
+
+    %% 4. Luyện tập Flashcard (Active Recall Review)
+    FlashcardSession ||--o{ UserVocabProgress : "updates"
+
+    %% 5. Cộng đồng & Kiểm duyệt (Community & Moderation - Roadmap Layer)
+    WeeklyChallenge ||--o{ UserReflection : "prompts"
+    UserReflection ||--o{ Reaction : "receives"
+    UserReflection ||--o{ Report : "receives"

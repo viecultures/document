@@ -1,6 +1,6 @@
 # 🖥️ Đặc Tả Giao Diện Màn Hình (Screen Specifications)
 
-Tài liệu mô tả chi tiết bố cục, thành phần và tương tác trên các màn hình chính của ứng dụng **VN Culture Reader** trên Web App và Mobile Web App.
+Tài liệu mô tả chi tiết bố cục, thành phần và tương tác trên các màn hình chính của ứng dụng **VieCultures** trên Web App và Mobile Web App.
 
 ---
 

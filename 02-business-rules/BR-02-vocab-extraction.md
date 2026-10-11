@@ -1,7 +1,7 @@
 # 📜 Quy Tắc Nghiệp Vụ BR-02: Trích Xuất & Quản Lý Từ Vựng Trong Ngữ Cảnh
 
 ## 1. Mục Đích & Phạm Vi
-Quy định phương pháp trích xuất, cấu trúc dữ liệu và điều kiện bắt buộc đối với từ vựng học thuật trong dự án **VN Culture Reader**.
+Quy định phương pháp trích xuất, cấu trúc dữ liệu và điều kiện bắt buộc đối với từ vựng học thuật trong dự án **VieCultures**.
 
 ---
 
