@@ -25,11 +25,21 @@ erDiagram
 | Trường (Field) | Kiểu dữ liệu | Mô tả & Quy tắc |
 | :--- | :--- | :--- |
 | `id` | `String` (UUID) | Khóa chính của bài đọc. |
-| `title_en` | `String` | Tiêu đề tiếng Anh của bài đọc. |
+| `topic_group` | `String` | **Cụm chủ đề / Nhóm bài**: Tên câu chuyện văn hóa chung để gom các phiên bản đa cấp độ (ví dụ: *"Tục kéo vợ người Mông"*, *"Chợ tình Khâu Vai"*). Cho phép chuyển đổi linh hoạt các cấp độ (Level 1, 2, 3) trên cùng một bài học. |
+| `title_en` | `String` | Tiêu đề tiếng Anh của bài đọc theo cấp độ (TITLE). |
 | `title_vi` | `String` | Tiêu đề tiếng Việt dịch tương ứng. |
-| `topic` | `String` | Chủ đề (ví dụ: *History, Cuisine, Heritage, Festival...*). |
-| `shadowing_audio_url` | `String` (URL) | Đường dẫn file âm thanh AI Shadowing đọc toàn bộ bài bài đọc. |
-| `level` | `Enum` | Trình độ bài đọc (`B1`, `B2`, `C1`). |
+| `topic` | `String` | Thể loại chuyên mục (ví dụ: *Phong tục tập quán, Lễ hội, Di sản, Ẩm thực...*). |
+| `region` | `String` | **Vùng miền / Tỉnh thành**: Địa danh văn hóa gắn liền với bài viết (ví dụ: *Lào Cai, Tuyên Quang, Đắk Lắk, Phú Thọ...*). Phục vụ tính năng lọc "Bốn miền khám phá". |
+| `level` | `Enum` | Trình độ bài đọc (`A1`, `A2`, `B1`, `B2`, `C1`, `C2`). Khớp với cột Level 1 (A1), Level 2 (B1), Level 3 (B2/C1). |
+| `word_count` | `Integer` | **Số lượng từ**: Độ dài bài đọc tiếng Anh (ví dụ: 89, 238, 415 words). Dùng để tính tốc độ đọc và hiển thị cho người học. |
+| `read_time` | `String` | Thời lượng đọc ước tính (ví dụ: *"2 mins"*, *"5 mins"*). |
+| `summary` | `Text` | Tóm tắt ngắn gọn nội dung bài đọc. |
+| `content_en` | `Text` | Toàn văn bài đọc tiếng Anh (`ENGLISH READING`). |
+| `content_vi` | `Text` | Toàn văn bài dịch tiếng Việt (`VIETNAMESE TRANSLATION`). |
+| `image_url` | `String` (URL) | Hình ảnh minh họa bài đọc văn hóa. |
+| `shadowing_audio_url` | `String` (URL) | Đường dẫn file âm thanh AI Shadowing đọc toàn bộ bài đọc. |
+| `total_reads` | `Integer` | Số lượt người học đã truy cập bài. |
+| `likes_count` | `Integer` | Số lượt yêu thích bài đọc. |
 | `created_at` | `Timestamp` | Thời gian tạo bài đọc. |
 
 ---
@@ -48,18 +58,20 @@ erDiagram
 
 ---
 
-## 4. Thực Thể `VocabItem` (Từ Vựng Ngữ Cảnh)
+## 4. Thực Thể `VocabItem` (Từ Vựng & Cụm Từ Ngữ Cảnh)
 
 | Trường (Field) | Kiểu dữ liệu | Mô tả & Quy tắc |
 | :--- | :--- | :--- |
 | `id` | `String` (UUID) | ID từ vựng. |
 | `post_id` | `String` (FK) | Mã liên kết với bài đọc xuất bản từ này. |
-| `word` | `String` | Từ gốc tiếng Anh. |
-| `ipa` | `String` | Phiên âm quốc tế IPA. |
-| `pos` | `String` | Từ loại (*noun, verb, adj, adv...*). |
-| `vi_meaning` | `String` | Nghĩa tiếng Việt theo ngữ cảnh. |
-| `context_sentence` | `Text` | **Bắt buộc**: Nguyên văn câu tiếng Anh chứa từ trong bài đọc. |
+| `word` | `String` | **Từ gốc hoặc cụm từ** tiếng Anh (`Word / Phrase`, ví dụ: *tradition*, *marriage custom*, *expensive gifts*). |
+| `ipa` | `String` | Phiên âm quốc tế IPA (cho phép nullable, có thể sinh tự động bởi AI). |
+| `pos` | `String` | Từ loại (*noun, verb, adj, phrase...* - cho phép nullable lúc import ban đầu). |
+| `vi_meaning` | `String` | Nghĩa tiếng Việt tương ứng (`Nghĩa tiếng Việt`). |
+| `context_sentence` | `Text` | Câu tiếng Anh trong bài đọc chứa từ/cụm từ này (cho phép trích xuất tự động khi import bài). |
 | `audio_url` | `String` (URL) | File phát âm từ vựng đơn lẻ. |
+| `level` | `Enum` | Trình độ CEFR của từ (`A1` đến `C2`). |
+| `usage_note` | `Text` | Ghi chú ngữ cảnh sử dụng văn hóa hoặc ngữ pháp. |
 
 ---
 
