@@ -2,6 +2,7 @@
 
 > **Kế thừa từ:** Triết lý sản phẩm VieCultures  
 > **Tham chiếu hằng số:** [`system_constants.md`](./system_constants.md)  
+> **Bản trình bày Hội đồng (Clean Flow):** [`presentation_product_flow.md`](./presentation_product_flow.md)  
 > **Các domain triển khai:** `01_domain_reader`, `02_domain_vocab_flashcards`, `03_domain_ai_companion`, `04_domain_speaking_voice`, `05_domain_gamification`
 
 ---
