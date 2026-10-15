@@ -43,6 +43,39 @@ flowchart TD
 
 ---
 
+## 🚀 Luồng Chính Của Sản Phẩm (End-to-End Product Main Flow)
+
+Luồng trải nghiệm chính của VieCultures được chuẩn hóa theo mô hình liên hoàn **3 Giai Đoạn – 9 Chặng (7–10 phút/chu trình)**, giải quyết bài toán trải nghiệm học tập không rào cản và chốt chuyển đổi kinh doanh cho Startup:
+
+```mermaid
+flowchart TD
+    subgraph P1 ["Giai Đoạn 1: Học Tập Không Rào Cản (Free / Guest)"]
+        S1["1. Đọc Song Ngữ & Sticky Audio (1x, 0.8x, 0.5x)"]
+        --> S2["2. Trích Xuất & Lưu Từ Vựng (1-Click Save + Context)"]
+        --> S3["3. Nghe Chép Dictation (Điền từ khuyết theo Audio)"]
+        --> S4["4. Ôn Tập Flashcard (Lật thẻ 2 mặt & Tự đánh giá 🟢/🔴)"]
+    end
+
+    subgraph P2 ["Giai Đoạn 2: Thành Tựu & Đăng Nhập (Conversion Gateway)"]
+        S4 --> S5["5. Đóng Mộc Son Đỏ & Kích Hoạt Streak Day 1"]
+        S5 --> S6["6. Đăng Nhập Để Lưu Giữ Mộc Son & Tiến Trình Học"]
+    end
+
+    subgraph P3 ["Giai Đoạn 3: Nâng Cấp Pro & Mở Khóa AI (Monetization & Retention)"]
+        S6 --> S7["7. Nâng Cấp Gói Pro (39.000đ/tháng - Mock Checkout QR)"]
+        S7 --> S8["8. Trò Chuyện Chuyên Sâu Cùng Trợ Lý AI Companion"]
+        S8 --> S9["9. Nút 'Bài Tiếp Theo' Duy Trì Chuỗi Học Tập"]
+    end
+
+    style P1 fill:#fefce8,stroke:#ca8a04,stroke-width:2px;
+    style P2 fill:#fee2e2,stroke:#dc2626,stroke-width:2px;
+    style P3 fill:#eff6ff,stroke:#2563eb,stroke-width:2px;
+```
+
+> 📖 **Chi tiết hợp đồng dữ liệu & phân loại khảo sát:** Xem tài liệu chuẩn SSOT tại [`interface_learning_loop.md`](./00_core/interface_learning_loop.md).
+
+---
+
 ## 📂 Bảng Tra Cứu Các Domain Nghiệp Vụ (Domain Index)
 
 | Thư Mục Domain | Interface Cha (Contract) | Các File Triển Khai Con (Implementations) | Trách Nhiệm Chính |

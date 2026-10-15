@@ -23,6 +23,7 @@ Domain `03_domain_ai_companion` chịu trách nhiệm:
 ---
 
 ## 4. Hợp Đồng Giao Tiếp Liên Domain (Events & Contracts)
-- **Nhận từ `01_domain_reader`:** Nhận `lessonId`, `topic`, `title_en`, `summary` để làm ngữ cảnh hội thoại khi người học mở AI Map sau khi đọc bài.
+- **Nhận từ `01_domain_reader` & `00_core`:** Nhận `lessonId`, `topic`, `title_en`, `summary`, `counter_perspective` để làm ngữ cảnh hội thoại sâu bám sát bài đọc người học vừa hoàn thành.
+- **Kích hoạt sau nâng cấp Pro (Pro Onboarding Chat):** Nhận event từ `07_domain_startup_business` khi nâng cấp Pro thành công, tự động khởi tạo tin nhắn chào mừng và 2–3 gợi ý đàm thoại nhanh (Quick Prompts) bằng tiếng Anh.
 - **Giao tiếp với `07_domain_startup_business`:** Kiểm tra hạn mức tương tác (Free User: 3 requests/ngày; Premium/Trial: Unlimited).
 - **Tính toán chi phí COGS:** Mỗi lượt chat tiêu tốn token đầu vào/đầu ra, được hạch toán vào mô hình chi phí của `07_domain_startup_business`.

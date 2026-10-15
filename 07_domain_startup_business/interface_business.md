@@ -24,3 +24,7 @@ Domain `07_domain_startup_business` chịu trách nhiệm:
 
 ## 4. Hợp Đồng Giao Tiếp Liên Domain (Events & Contracts)
 - **Áp dụng chính sách truy cập cho toàn hệ thống:** Cung cấp thông tin quyền hạn (`canAccessFeature`, `savedVocabLimit`, `hasAds`) cho các domain `01_domain_reader`, `02_domain_vocab_flashcards`, `03_domain_ai_companion`.
+- **Hợp đồng Chốt chuyển đổi sau thành tựu (Achievement-Gated Conversion):**
+  - Nhận event `ON_LESSON_COMPLETED` (sau khi đóng Mộc Son) từ `05_domain_gamification` để kích hoạt Modal Đăng nhập lưu thành tựu (`AUTH_GATEWAY`).
+  - Sau khi người dùng xác thực thành công, kích hoạt màn hình thanh toán mô phỏng (`MOCK_CHECKOUT_EVENT`: 39.000đ/tháng).
+  - Khi xác nhận thanh toán thành công, cập nhật `UserTier = TIER_PREMIUM` và chuyển hướng sang mở khóa đàm thoại với `03_domain_ai_companion`.
