@@ -22,8 +22,9 @@
 | 10 | `/playground` | AI Cultural Playground | `features/playground/pages/playground.tsx` | `FocusLayout` | Public | `story`, `topic`, `level` |
 | 11 | `/pricing` | Gói hội viên & Bảng giá | `features/subscription/pages/PricingPage.tsx` | `AppLayout` | Public | – |
 | 12 | `/pricing/checkout` | Xác nhận thanh toán gói | `features/subscription/pages/CheckoutPage.tsx` | `AppLayout` | `RequireAuth` (Bắt buộc login) | – |
-| 13 | `/admin` | Quản trị CMS | `features/admin/pages/AdminPage.tsx` | `AppLayout` | `RequireRole("ADMIN")` (JWT Claim) | – |
-| 14 | `*` | Trang báo lỗi 404 | `pages/NotFoundPage.tsx` | `AppLayout` | Public | – |
+| 13 | `/profile` | Hồ sơ học viên & Hộ chiếu Di sản | `features/profile/pages/ProfilePage.tsx` | `AppLayout` | `RequireAuth` (Bắt buộc login) | `tab` (`passport` \| `badges` \| `vocab` \| `subscription`) |
+| 14 | `/admin` | Quản trị CMS | `features/admin/pages/AdminPage.tsx` | `AppLayout` | `RequireRole("ADMIN")` (JWT Claim) | – |
+| 15 | `*` | Trang báo lỗi 404 | `pages/NotFoundPage.tsx` | `AppLayout` | Public | – |
 
 ---
 
@@ -34,6 +35,9 @@ Các URL cũ vẫn được giữ chuyển hướng tự động để không l�
 | URL Cũ / Phụ | URL Đích Canonical | Loại Chuyển Hướng | Ghi chú |
 |--------------|-------------------|-------------------|---------|
 | `/landing` | `/` | `<Navigate replace />` | Rút gọn về trang gốc |
+| `/account` | `/profile` | `<Navigate replace />` | Gom về hồ sơ cá nhân |
+| `/passport` | `/profile?tab=passport` | `<Navigate replace />` | Dẫn thẳng tới Hộ chiếu Mộc Son |
+| `/achievements` | `/profile?tab=badges` | `<Navigate replace />` | Dẫn thẳng tới Huy hiệu thành tựu |
 | `/community-1` | `/community` | `<Navigate replace />` | Bỏ hậu tố `-1` |
 | `/community-2` | `/community-contest` | `<Navigate replace />` | Đổi sang tên có ý nghĩa |
 | `/checkout` | `/pricing/checkout` | `<Navigate replace />` | Gom về nhóm `/pricing/` |
@@ -47,6 +51,7 @@ Các URL cũ vẫn được giữ chuyển hướng tự động để không l�
 | `/subscription` | `/pricing` | `<Navigate replace />` | Gom về bảng giá |
 | `/upgrade` | `/pricing` | `<Navigate replace />` | Gom về bảng giá |
 | `/admin/posts` | `/admin` | `<Navigate replace />` | Gom về trang quản trị |
+
 
 ---
 

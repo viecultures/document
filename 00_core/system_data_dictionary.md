@@ -15,6 +15,7 @@ erDiagram
     ReadingPost ||--|{ ParagraphPair : contains
     ReadingPost ||--|{ VocabItem : extracts
     ReadingPost ||--|{ UserReflection : generates
+    ReadingPost ||--|{ QuizQuestion : tests
     User ||--|{ UserReflection : writes
     User ||--|{ UserVocabProgress : tracks
     VocabItem ||--|{ UserVocabProgress : measures
@@ -100,3 +101,18 @@ erDiagram
 | `status` | `Enum` | `learning` (🔴 Cần ôn lại) \| `mastered` (🟢 Đã nhớ). |
 | `review_count` | `Integer` | Số lần đã lật ôn tập. |
 | `last_reviewed_at` | `Timestamp` | Thời điểm đánh giá nhị phân gần nhất. |
+
+---
+
+## 7. Thực Thể `QuizQuestion` (Bộ Câu Hỏi Đọc Hiểu)
+
+| Trường (Field) | Kiểu dữ liệu | Mô tả & Quy tắc |
+| :--- | :--- | :--- |
+| `id` | `String` (UUID) | Khóa chính câu hỏi. |
+| `post_id` | `String` (FK) | Mã liên kết với `ReadingPost`. |
+| `order_index` | `Integer` | Thứ tự câu hỏi trong bài đọc (0, 1, 2...). |
+| `question` | `Text` | Nội dung câu hỏi thấu hiểu văn hóa / nội dung bài đọc. |
+| `options` | `JSON Array / Text` | Danh sách 3-4 lựa chọn `[{"key":"A", "text":"..."}, {"key":"B", "text":"..."}]`. |
+| `correct_key` | `String` | Khóa đáp án đúng ('A', 'B', 'C', 'D'). |
+| `explanation` | `Text` | Lời giải thích ý nghĩa văn hóa hoặc ngữ cảnh bài viết cho đáp án. |
+
