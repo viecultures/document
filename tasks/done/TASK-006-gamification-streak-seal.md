@@ -5,7 +5,7 @@ flow: FLOW-GAMIFICATION
 step_in_flow: Step 1 of 1 (Retention & Habit Loop)
 assigned_to: frontend-dev
 reviewer: tech-lead
-status: BACKLOG
+status: DONE
 created_at: 2026-10-25
 updated_at: 2026-10-25
 inputs:
@@ -27,9 +27,9 @@ dependencies:
 - **Previous Flow**: FLOW-VOCAB-FLASHCARD.
 
 ## 2. Acceptance Criteria (Product Owner)
-- [ ] Upon completing reader or flashcard study, trigger the cultural Red Seal ("Mộc Son Đỏ") stamping animation.
-- [ ] Increment and display continuous Daily Streak counter (Day 1, Day 2...).
-- [ ] Non-authenticated users are prompted to register/login to preserve their seal and streak history.
+- [x] Upon completing reader or flashcard study, trigger the cultural Red Seal ("Mộc Son Đỏ") stamping animation.
+- [x] Increment and display continuous Daily Streak counter (Day 1, Day 2...).
+- [x] Non-authenticated users are prompted to register/login to preserve their seal and streak history.
 
 ## 3. Technical Constraints (Tech Lead)
 - High-fidelity cultural visual styling matching the Warm Heritage aesthetic.
