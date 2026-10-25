@@ -11,6 +11,7 @@
 | # | Route Path | Tên / Chức năng | Component Page | Layout | Bảo vệ (Guard) | Query Params hỗ trợ |
 |---|------------|-----------------|----------------|--------|----------------|----------------------|
 | 1 | `/` | Trang chủ giới thiệu | `features/landing/pages/landing.tsx` | `PublicLayout` | Public | – |
+| 1a | `/landing-concept` | Bản xem trước landing chuyên sâu về ẩm thực Việt, đối chiếu với `/` | `features/landing/pages/FoodLandingPage.tsx` | `PublicLayout` | Public | – |
 | 2 | `/login` | Đăng nhập / Đăng ký | `features/auth/pages/login.tsx` | `FocusLayout` | `GuestOnly` (Đã login → `/home`) | `redirect` |
 | 3 | `/home` | Phòng học cá nhân (Dashboard) | `features/home/pages/home.tsx` | `FocusLayout` | `RequireAuth` (Bắt buộc login) | – |
 | 4 | `/discovery` | Khám phá bài đọc & chủ đề | `features/discovery/pages/discovery.tsx` | `AppLayout` | Public | – |
