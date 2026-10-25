@@ -18,7 +18,7 @@ Trang dùng `PublicLayout`, route `/landing-concept`, giữ `/` để so sánh. 
 6. **Hành trình vùng miền:** cho thấy sản phẩm dự định mở rộng vào Trung và Nam bằng nhãn trạng thái trung thực, không dựng bài hoặc số liệu chưa có. Miền Bắc có thể dẫn tới các series đã xuất bản.
 7. **Kết trang:** lời mời bắt đầu đọc và link khám phá thêm; dùng Footer chung. Không thêm testimonial, kết quả học tập hoặc số liệu chuyển đổi không có nguồn.
 
-Visual sử dụng token trong `frontend/src/index.css`: nền `surface`, chữ `ink`/`ink-soft`, CTA `action`, điểm nhấn `accent-ink`, viền `line`; heading biên tập Playfair Display, giao diện Be Vietnam Pro. Hình vòm và đường dẫn mảnh gợi hành trình ẩm thực, không sao chép thương hiệu The Forum. Chữ hướng dẫn quan trọng từ 14px, nút từ 44px, focus rõ, ảnh có kích thước giữ chỗ và alt phù hợp.
+Visual sử dụng token trong `frontend/src/index.css`: nền `surface` và `surface-muted`, chữ `ink`/`ink-soft`, CTA `action`, điểm nhấn `accent-ink`, viền `line`. Toàn bộ tiêu đề và nội dung của `/landing-concept` dùng Be Vietnam Pro; phân cấp bằng cỡ chữ, độ đậm và khoảng trắng, không dùng chữ nghiêng trang trí. Logo chung giữ kiểu chữ nhận diện hiện tại. Hình vòm và đường dẫn mảnh gợi hành trình ẩm thực, không sao chép thương hiệu The Forum. Chữ hướng dẫn quan trọng từ 14px, nút từ 44px, focus rõ, ảnh có kích thước giữ chỗ và alt phù hợp.
 
 ## Phase 2 — Chuyển động kể chuyện
 
