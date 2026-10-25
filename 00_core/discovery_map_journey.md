@@ -14,7 +14,9 @@ Trang Khám phá (`/discovery`, chế độ Journey) giữ luồng ba mức: to�
 
 ## Quy tắc hiển thị
 
-- Ba ảnh là ảnh hiện có trong registry của series; nếu ảnh tải lỗi, mảng vẫn có nhãn và thao tác chọn được.
-- Mảng ảnh có viền phân tách, lớp phủ giúp đọc chữ và trạng thái hover/focus rõ ràng. Nội dung quan trọng không chỉ dựa vào màu sắc hay ảnh.
+- Ba ảnh là ảnh hiện có trong registry của series; nếu ảnh tải lỗi, mục chọn bên dưới vẫn có nhãn và thao tác được.
+- Mảng ảnh có viền phân tách và trạng thái hover/focus rõ ràng. Tên series nằm ở mục chọn bên dưới để không che ảnh hoặc bị đường bao cắt mất. Nội dung quan trọng không chỉ dựa vào màu sắc hay ảnh.
+- Ảnh ghép trong đường bao cần giữ phần chủ thể món ăn nhìn rõ, không dùng một vùng ảnh quá hẹp khiến một series chỉ còn nền cảnh. Tên bài/series không được cắt bởi đường bao bản đồ.
+- Bên dưới hình ghép có ba mục ảnh ngang tỉ lệ 16:9 với số thứ tự, tên series và lời mời mở bài. Đây cũng là cách chọn tương đương với ba mảng trên bản đồ, đặc biệt trên màn hình hẹp. Mỗi ảnh dùng toàn bộ bề ngang mục và không có lớp phủ tối che chủ thể.
 - Ở màn hình hẹp, hình Hà Nội vẫn xem được trọn vẹn và ba mục vẫn là mục tiêu chạm riêng biệt. Có nhãn truy cập cho mỗi mục.
 - Phần ghép là minh họa bài viết trong Hà Nội, không khẳng định vị trí địa lý của món ăn hay di sản trong tỉnh.
