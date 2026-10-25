@@ -59,7 +59,8 @@ Items requiring high-level business direction or approval from the **Client** ar
 | Decision ID | Target Flow | Topic | Selected Decision | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | `DECISION-000` | Squad Governance | Operating Model | Autonomous Squad with User as Client/Stakeholder | RESOLVED |
-| `DECISION-001` | All Flows | Core Milestone Priority Directive | **Top Priority**: Đảm bảo chức năng chatbox hoạt động tốt. Ưu tiên bốc và giải quyết ticket chatbox trước tiên. Sau khi xong mới làm tiếp các chức năng khác bám theo main flow. | RESOLVED |
+| `DECISION-001` | All Flows | Core Milestone Priority Directive | **Updated Directive**: Client đã tự hoàn thiện tính năng Chatbox (`FLOW-AI-COMPANION`). Squad KHÔNG làm task chatbox nữa. PM và Squad bám sát theo main flow kế tiếp trên BOARD.md (bắt đầu từ `FLOW-READER` và các flow tiếp theo). | RESOLVED |
+| `DECISION-002` | Milestone 2 | Next Milestone Priority Directive (Post-Core Pipeline Delivery) | [Option A (Recommended): `FLOW-SPEAKING-VOICE`](CLIENT_QUESTIONS.md#decision-002-next-milestone-priority-directive-post-core-pipeline-delivery) | PENDING_CLIENT_RESPONSE |
 
 ---
 
