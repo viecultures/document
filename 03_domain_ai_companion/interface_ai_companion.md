@@ -4,6 +4,7 @@
 - Kế thừa Core Loop: [`interface_learning_loop.md`](../00_core/interface_learning_loop.md) (Bước 6)
 - Tham chiếu Hằng số (SSOT): [`system_constants.md`](../00_core/system_constants.md) (`TIER_FREE`: 3 lượt/ngày, `TIER_PREMIUM`: không giới hạn)
 - Tham chiếu Ngoại lệ: [`edge_cases_and_validation.md`](../00_core/edge_cases_and_validation.md) (`EC-05.1`, `EC-05.2`, `EC-05.3`)
+- Bản đồ Journey tại trang Khám phá và màn hình ảnh ghép Hà Nội được đặc tả riêng ở [`discovery_map_journey.md`](../00_core/discovery_map_journey.md).
 
 ---
 
