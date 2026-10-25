@@ -5,7 +5,7 @@ flow: FLOW-VOCAB-FLASHCARD
 step_in_flow: Step 1 of 1 (Vocabulary Retention Slice)
 assigned_to: frontend-dev
 reviewer: tech-lead
-status: BACKLOG
+status: DONE
 created_at: 2026-10-25
 updated_at: 2026-10-25
 inputs:
@@ -27,9 +27,9 @@ dependencies:
 - **Previous Flow**: FLOW-READER.
 
 ## 2. Acceptance Criteria (Product Owner)
-- [ ] 1-Click save on unfamiliar word inside reader automatically attaches the exact `context_sentence` from the current paragraph.
-- [ ] 2-sided flashcard study view (Front: Word + Context sentence with blank; Back: Definition + IPA + Example).
-- [ ] Binary self-evaluation buttons: Remembered (🟢) and Forgot (🔴) updating spaced repetition interval.
+- [x] 1-Click save on unfamiliar word inside reader automatically attaches the exact `context_sentence` from the current paragraph.
+- [x] 2-sided flashcard study view (Front: Word + Context sentence with blank; Back: Definition + IPA + Example).
+- [x] Binary self-evaluation buttons: Remembered (🟢) and Forgot (🔴) updating spaced repetition interval.
 
 ## 3. Technical Constraints (Tech Lead)
 - Persist state to `user_vocab_progress` API and fallback gracefully to localStorage when offline.
