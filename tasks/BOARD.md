@@ -10,6 +10,7 @@ This board represents the central state of all work orders organized by **Flows 
 
 | Flow Identifier | Flow Name | Total Tasks | Completed | Active Step | Priority & Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| **`FLOW-BACKEND-PERSISTENCE`** | Community & Streak REST API & DB Persistence | 2 | 0 / 2 | Step 1: TASK-009 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
 | **`FLOW-AI-COMPANION`** | Cultural Chatbot (Context Injection & PG Search) | 3 | 3 / 3 | Completed by Client | 🟢 **DELIVERED (BY CLIENT)** |
 | **`FLOW-READER`** | Bilingual Reader & Sticky Audio Player [1x, 0.8x, 0.5x] | 1 | 1 / 1 | Completed: TASK-004 | 🟢 **DELIVERED** |
 | **`FLOW-VOCAB-FLASHCARD`**| 1-Click Save with Context & Leitner Flashcards | 1 | 1 / 1 | Completed: TASK-005 | 🟢 **DELIVERED** |
@@ -19,13 +20,14 @@ This board represents the central state of all work orders organized by **Flows 
 
 ---
 
-## 2. Active Flow: `FLOW-COMMUNITY` (Delivered)
+## 2. Active Flow: `FLOW-BACKEND-PERSISTENCE` (Priority #1)
 
 ### Backlog (Pending Execution)
-- *None*
+- 🔴 [TASK-009](backlog/FLOW-BACKEND-PERSISTENCE/TASK-009-community-reflections-persistence.md): Community Reflections REST API and PostgreSQL Persistence (Status: **READY** | Assignee: `backend-dev`)
+- 🔴 [TASK-010](backlog/FLOW-BACKEND-PERSISTENCE/TASK-010-gamification-streak-seal-persistence.md): Gamification Streak and Cultural Red Seal REST API Persistence (Status: **READY** | Assignee: `backend-dev`)
 
 ### In Progress (Active Subagents)
-- *None*
+- *None (Awaiting Single Ticket Execution Gate)*
 
 ### In Review (Awaiting Review & Sign-Off)
 - *None*
@@ -44,6 +46,8 @@ This board represents the central state of all work orders organized by **Flows 
 
 | Task ID | Target Flow | Title | Assignee | Status |
 | :--- | :--- | :--- | :--- | :--- |
+| [TASK-009](backlog/FLOW-BACKEND-PERSISTENCE/TASK-009-community-reflections-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Community Reflections REST API and PostgreSQL Persistence | `backend-dev` | READY |
+| [TASK-010](backlog/FLOW-BACKEND-PERSISTENCE/TASK-010-gamification-streak-seal-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Gamification Streak and Cultural Red Seal REST API Persistence | `backend-dev` | READY |
 | [TASK-004](done/TASK-004-reader-audio-pairing.md) | `FLOW-READER` | Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds | `frontend-dev` | DONE |
 | [TASK-005](done/TASK-005-vocab-context-flashcard.md) | `FLOW-VOCAB-FLASHCARD` | 1-Click Save with Context Sentence and Leitner Binary Flashcards | `frontend-dev` | DONE |
 | [TASK-006](done/TASK-006-gamification-streak-seal.md) | `FLOW-GAMIFICATION` | Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual | `frontend-dev` | DONE |
@@ -60,7 +64,7 @@ Items requiring high-level business direction or approval from the **Client** ar
 | :--- | :--- | :--- | :--- | :--- |
 | `DECISION-000` | Squad Governance | Operating Model | Autonomous Squad with User as Client/Stakeholder | RESOLVED |
 | `DECISION-001` | All Flows | Core Milestone Priority Directive | **Updated Directive**: Client đã tự hoàn thiện tính năng Chatbox (`FLOW-AI-COMPANION`). Squad KHÔNG làm task chatbox nữa. PM và Squad bám sát theo main flow kế tiếp trên BOARD.md (bắt đầu từ `FLOW-READER` và các flow tiếp theo). | RESOLVED |
-| `DECISION-002` | Milestone 2 | Next Milestone Priority Directive (Post-Core Pipeline Delivery) | [Option A (Recommended): `FLOW-SPEAKING-VOICE`](CLIENT_QUESTIONS.md#decision-002-next-milestone-priority-directive-post-core-pipeline-delivery) | PENDING_CLIENT_RESPONSE |
+| `DECISION-002` | Milestone 2 | Next Milestone Priority Directive | **Option B: `FLOW-BACKEND-PERSISTENCE`** (Strict Auth JWT, Entity UserStreak & UserSeal, bảng quan hệ user_reflection_reactions). | RESOLVED |
 
 ---
 
