@@ -13,16 +13,16 @@ This board represents the central state of all work orders organized by **Flows 
 | **`FLOW-AI-COMPANION`** | Cultural Chatbot (Context Injection & PG Search) | 3 | 3 / 3 | Completed by Client | 🟢 **DELIVERED (BY CLIENT)** |
 | **`FLOW-READER`** | Bilingual Reader & Sticky Audio Player [1x, 0.8x, 0.5x] | 1 | 1 / 1 | Completed: TASK-004 | 🟢 **DELIVERED** |
 | **`FLOW-VOCAB-FLASHCARD`**| 1-Click Save with Context & Leitner Flashcards | 1 | 1 / 1 | Completed: TASK-005 | 🟢 **DELIVERED** |
-| **`FLOW-GAMIFICATION`** | Daily Streak & Red Seal (Mộc Son Đỏ) Ritual | 1 | 0 / 1 | Step 1: TASK-006 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
-| **`FLOW-BUSINESS`** | Pro Subscription (39k/mo Mock QR & Quota Unlock) | 1 | 0 / 1 | Step 1: TASK-007 | ⏳ BACKLOG |
+| **`FLOW-GAMIFICATION`** | Daily Streak & Red Seal (Mộc Son Đỏ) Ritual | 1 | 1 / 1 | Completed: TASK-006 | 🟢 **DELIVERED** |
+| **`FLOW-BUSINESS`** | Pro Subscription (39k/mo Mock QR & Quota Unlock) | 1 | 0 / 1 | Step 1: TASK-007 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
 | **`FLOW-COMMUNITY`** | Non-Judgmental Reflections UGC & Moderation | 1 | 0 / 1 | Step 1: TASK-008 | ⏳ BACKLOG |
 
 ---
 
-## 2. Active Flow: `FLOW-GAMIFICATION` (Priority #1)
+## 2. Active Flow: `FLOW-BUSINESS` (Priority #1)
 
 ### Backlog (Pending Execution)
-- 🟢 [TASK-006](backlog/FLOW-GAMIFICATION/TASK-006-gamification-streak-seal.md): Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual (Status: **READY** | Assignee: `frontend-dev`)
+- 🟢 [TASK-007](backlog/FLOW-BUSINESS/TASK-007-pro-checkout-qr.md): Pro Subscription Mock Checkout QR and Unlimited Access Unlock (Status: **READY** | Assignee: `frontend-dev`)
 
 ### In Progress (Active Subagents)
 - *None (Awaiting Next Single Ticket Execution Gate)*
@@ -31,6 +31,7 @@ This board represents the central state of all work orders organized by **Flows 
 - *None*
 
 ### Done (Signed-Off Deliverables)
+- 🟢 [TASK-006](done/TASK-006-gamification-streak-seal.md): Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual (Status: **DONE** | Assignee: `frontend-dev`)
 - 🟢 [TASK-005](done/TASK-005-vocab-context-flashcard.md): 1-Click Save with Context Sentence and Leitner Binary Flashcards (Status: **DONE** | Assignee: `frontend-dev`)
 - 🟢 [TASK-004](done/TASK-004-reader-audio-pairing.md): Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds (Status: **DONE** | Assignee: `frontend-dev`)
 - `FLOW-AI-COMPANION`: Chatbox completed by Client.
@@ -43,8 +44,8 @@ This board represents the central state of all work orders organized by **Flows 
 | :--- | :--- | :--- | :--- | :--- |
 | [TASK-004](done/TASK-004-reader-audio-pairing.md) | `FLOW-READER` | Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds | `frontend-dev` | DONE |
 | [TASK-005](done/TASK-005-vocab-context-flashcard.md) | `FLOW-VOCAB-FLASHCARD` | 1-Click Save with Context Sentence and Leitner Binary Flashcards | `frontend-dev` | DONE |
-| [TASK-006](backlog/FLOW-GAMIFICATION/TASK-006-gamification-streak-seal.md) | `FLOW-GAMIFICATION` | Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual | `frontend-dev` | READY |
-| [TASK-007](backlog/FLOW-BUSINESS/TASK-007-pro-checkout-qr.md) | `FLOW-BUSINESS` | Pro Subscription Mock Checkout QR and Unlimited Access Unlock | `frontend-dev` | BACKLOG |
+| [TASK-006](done/TASK-006-gamification-streak-seal.md) | `FLOW-GAMIFICATION` | Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual | `frontend-dev` | DONE |
+| [TASK-007](backlog/FLOW-BUSINESS/TASK-007-pro-checkout-qr.md) | `FLOW-BUSINESS` | Pro Subscription Mock Checkout QR and Unlimited Access Unlock | `frontend-dev` | READY |
 | [TASK-008](backlog/FLOW-COMMUNITY/TASK-008-community-reflections.md) | `FLOW-COMMUNITY` | Non-Judgmental Reflections UGC Feed with Passive Moderation | `frontend-dev` | BACKLOG |
 
 ---
