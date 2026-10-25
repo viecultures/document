@@ -24,6 +24,21 @@ Whenever the Client confirms requirements or requests UI/logic adjustments, the 
   - Maintain synchronization between ad-hoc UI prompts and design specs.
 - **Status**: CLOSED
 
+### [ALIGN-002] Chatbox Architecture Alignment - Context Injection & PostgreSQL Search
+- **Date**: 2026-10-24
+- **Participants**: Client (User), Business Analyst (BA)
+- **Discussion Summary**: 
+  - Client proposed using Vertex AI Managed RAG Engine + Cloud Spanner for the website cultural chatbot.
+  - BA analyzed feasibility, infrastructure complexity, and COGS: Vertex RAG + Spanner is over-engineering for the current scale (<100 articles, ~100k tokens total).
+  - Client agreed to proceed with **Option 1**: Context Injection + PostgreSQL Full-Text Search using existing Spring Boot backend and Google Gemini API.
+- **Specification Updates**:
+  - Created `docs/03_domain_ai_companion/context_retrieval_chat.md` specifying two chat modes (Lesson-scoped and Global search), API contracts (`POST /api/v1/companion/chat`), system prompt templates, and quota tiers.
+  - Updated `docs/03_domain_ai_companion/interface_ai_companion.md` with reference to the new context retrieval specification.
+- **Action Items for PM**:
+  - Register implementation task for backend chat service and frontend AI companion widget.
+  - Coordinate with `backend-dev` for Gemini integration and `frontend-dev` for floating chat modal.
+- **Status**: CLOSED
+
 <!-- Template for future alignment entries:
 ### [ALIGN-xxx] Title of Discussion or Change Request
 - **Date**: YYYY-MM-DD

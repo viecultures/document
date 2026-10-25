@@ -19,6 +19,7 @@ Domain `03_domain_ai_companion` chịu trách nhiệm:
 ## 3. Danh Sách Triển Khai Con (Implementations)
 1. [`conversational_flows.md`](./conversational_flows.md): Luồng hội thoại chuẩn, Onboarding, kiểm tra tâm trạng/sở thích và phân tầng thông tin Macro-to-Micro.
 2. [`fallback_mechanisms.md`](./fallback_mechanisms.md): Cơ chế dự phòng xử lý khi người dùng yêu cầu chủ đề chưa có bài đọc chi tiết (Summary + Discussion Prompts).
+3. [`context_retrieval_chat.md`](./context_retrieval_chat.md): Kiến trúc truy xuất dữ liệu ngữ cảnh (Context Injection) kết hợp PostgreSQL Search cho Chatbox thay thế RAG phức tạp.
 
 ---
 
