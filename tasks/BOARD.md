@@ -14,23 +14,25 @@ This board represents the central state of all work orders organized by **Flows 
 | **`FLOW-READER`** | Bilingual Reader & Sticky Audio Player [1x, 0.8x, 0.5x] | 1 | 1 / 1 | Completed: TASK-004 | 🟢 **DELIVERED** |
 | **`FLOW-VOCAB-FLASHCARD`**| 1-Click Save with Context & Leitner Flashcards | 1 | 1 / 1 | Completed: TASK-005 | 🟢 **DELIVERED** |
 | **`FLOW-GAMIFICATION`** | Daily Streak & Red Seal (Mộc Son Đỏ) Ritual | 1 | 1 / 1 | Completed: TASK-006 | 🟢 **DELIVERED** |
-| **`FLOW-BUSINESS`** | Pro Subscription (39k/mo Mock QR & Quota Unlock) | 1 | 0 / 1 | Step 1: TASK-007 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
-| **`FLOW-COMMUNITY`** | Non-Judgmental Reflections UGC & Moderation | 1 | 0 / 1 | Step 1: TASK-008 | ⏳ BACKLOG |
+| **`FLOW-BUSINESS`** | Pro Subscription (39k/mo Mock QR & Quota Unlock) | 1 | 1 / 1 | Completed: TASK-007 | 🟢 **DELIVERED** |
+| **`FLOW-COMMUNITY`** | Non-Judgmental Reflections UGC & Moderation | 1 | 1 / 1 | Completed: TASK-008 | 🟢 **DELIVERED** |
 
 ---
 
-## 2. Active Flow: `FLOW-BUSINESS` (Priority #1)
+## 2. Active Flow: `FLOW-COMMUNITY` (Delivered)
 
 ### Backlog (Pending Execution)
-- 🟢 [TASK-007](backlog/FLOW-BUSINESS/TASK-007-pro-checkout-qr.md): Pro Subscription Mock Checkout QR and Unlimited Access Unlock (Status: **READY** | Assignee: `frontend-dev`)
+- *None*
 
 ### In Progress (Active Subagents)
-- *None (Awaiting Next Single Ticket Execution Gate)*
+- *None*
 
 ### In Review (Awaiting Review & Sign-Off)
 - *None*
 
 ### Done (Signed-Off Deliverables)
+- 🟢 [TASK-008](done/TASK-008-community-reflections.md): Non-Judgmental Reflections UGC Feed with Passive Moderation (Status: **DONE** | Assignee: `frontend-dev`)
+- 🟢 [TASK-007](done/TASK-007-pro-checkout-qr.md): Pro Subscription Mock Checkout QR and Unlimited Access Unlock (Status: **DONE** | Assignee: `frontend-dev`)
 - 🟢 [TASK-006](done/TASK-006-gamification-streak-seal.md): Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual (Status: **DONE** | Assignee: `frontend-dev`)
 - 🟢 [TASK-005](done/TASK-005-vocab-context-flashcard.md): 1-Click Save with Context Sentence and Leitner Binary Flashcards (Status: **DONE** | Assignee: `frontend-dev`)
 - 🟢 [TASK-004](done/TASK-004-reader-audio-pairing.md): Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds (Status: **DONE** | Assignee: `frontend-dev`)
@@ -45,8 +47,8 @@ This board represents the central state of all work orders organized by **Flows 
 | [TASK-004](done/TASK-004-reader-audio-pairing.md) | `FLOW-READER` | Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds | `frontend-dev` | DONE |
 | [TASK-005](done/TASK-005-vocab-context-flashcard.md) | `FLOW-VOCAB-FLASHCARD` | 1-Click Save with Context Sentence and Leitner Binary Flashcards | `frontend-dev` | DONE |
 | [TASK-006](done/TASK-006-gamification-streak-seal.md) | `FLOW-GAMIFICATION` | Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual | `frontend-dev` | DONE |
-| [TASK-007](backlog/FLOW-BUSINESS/TASK-007-pro-checkout-qr.md) | `FLOW-BUSINESS` | Pro Subscription Mock Checkout QR and Unlimited Access Unlock | `frontend-dev` | READY |
-| [TASK-008](backlog/FLOW-COMMUNITY/TASK-008-community-reflections.md) | `FLOW-COMMUNITY` | Non-Judgmental Reflections UGC Feed with Passive Moderation | `frontend-dev` | BACKLOG |
+| [TASK-007](done/TASK-007-pro-checkout-qr.md) | `FLOW-BUSINESS` | Pro Subscription Mock Checkout QR and Unlimited Access Unlock | `frontend-dev` | DONE |
+| [TASK-008](done/TASK-008-community-reflections.md) | `FLOW-COMMUNITY` | Non-Judgmental Reflections UGC Feed with Passive Moderation | `frontend-dev` | DONE |
 
 ---
 

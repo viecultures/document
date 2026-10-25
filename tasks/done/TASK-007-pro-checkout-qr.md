@@ -5,7 +5,7 @@ flow: FLOW-BUSINESS
 step_in_flow: Step 1 of 1 (Monetization & Quota Gate)
 assigned_to: frontend-dev
 reviewer: tech-lead
-status: BACKLOG
+status: DONE
 created_at: 2026-10-25
 updated_at: 2026-10-25
 inputs:
@@ -27,9 +27,9 @@ dependencies:
 - **Previous Flow**: FLOW-GAMIFICATION.
 
 ## 2. Acceptance Criteria (Product Owner)
-- [ ] Display pricing tiers: Free (3 AI chat turns/day, 1-Click Save) vs Pro (39.000đ/month, unlimited AI chat, personalized mascot feedback).
-- [ ] Render interactive mock VietQR payment screen with timer and "Simulate Instant Transfer" button for demo testing.
-- [ ] Instant transition to Pro status upon payment confirmation; lifts the 3 turns/day AI rate limit immediately.
+- [x] Display pricing tiers: Free (3 AI chat turns/day, 1-Click Save) vs Pro (39.000đ/month, unlimited AI chat, personalized mascot feedback).
+- [x] Render interactive mock VietQR payment screen with timer and "Simulate Instant Transfer" button for demo testing.
+- [x] Instant transition to Pro status upon payment confirmation; lifts the 3 turns/day AI rate limit immediately.
 
 ## 3. Technical Constraints (Tech Lead)
 - Seamless auth state sync between client store, localStorage, and API headers.

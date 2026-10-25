@@ -5,7 +5,7 @@ flow: FLOW-COMMUNITY
 step_in_flow: Step 1 of 1 (Social Community & Belonging)
 assigned_to: frontend-dev
 reviewer: tech-lead
-status: BACKLOG
+status: DONE
 created_at: 2026-10-25
 updated_at: 2026-10-25
 inputs:
@@ -25,9 +25,9 @@ dependencies:
 - **Previous Flow**: FLOW-READER.
 
 ## 2. Acceptance Criteria (Product Owner)
-- [ ] Allow readers to submit personal cultural reflections (English or bilingual) below each reading post.
-- [ ] Enforce "Non-Judgmental English Policy": prominently display banner assuring learners that language errors are welcome.
-- [ ] Passive profanity and inappropriate content filter before reflection becomes public.
+- [x] Allow readers to submit personal cultural reflections (English or bilingual) below each reading post.
+- [x] Enforce "Non-Judgmental English Policy": prominently display banner assuring learners that language errors are welcome.
+- [x] Passive profanity and inappropriate content filter before reflection becomes public.
 
 ## 3. Technical Constraints (Tech Lead)
-- Optimistic UI updates with instant local reflection rendering.
+- [x] Optimistic UI updates with instant local reflection rendering.
