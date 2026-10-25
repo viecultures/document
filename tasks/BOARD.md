@@ -2,7 +2,7 @@
 
 This board represents the central state of all work orders organized by **Flows (Vertical Slices)**. The autonomous software development squad operates on this board, delivering end-to-end functionality to the **Client** (Stakeholder).
 
-> 🎯 **CLIENT DIRECTIVE (HIGHEST PRIORITY):** Đảm bảo chức năng chatbox hoạt động tốt. Ưu tiên bốc và hoàn thiện luồng chatbox trước tiên (`FLOW-AI-COMPANION`). Sau khi hoàn thành mới làm các tính năng khác bám theo main flow.
+> 🎯 **CLIENT DIRECTIVE:** Chức năng chatbox (`FLOW-AI-COMPANION`) đã được Client tự hoàn tất. Squad bỏ qua chatbox và tập trung thực hiện các tính năng tiếp theo bám sát main flow (`FLOW-READER`, `FLOW-VOCAB-FLASHCARD`, v.v.).
 
 ---
 
@@ -10,8 +10,8 @@ This board represents the central state of all work orders organized by **Flows 
 
 | Flow Identifier | Flow Name | Total Tasks | Completed | Active Step | Priority & Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`FLOW-AI-COMPANION`** | Cultural Chatbot (Context Injection & PG Search) | 3 | 0 / 3 | Step 1: TASK-001 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
-| **`FLOW-READER`** | Bilingual Reader & Sticky Audio Player [1x, 0.8x, 0.5x] | 1 | 0 / 1 | Step 1: TASK-004 | ⏳ BACKLOG |
+| **`FLOW-AI-COMPANION`** | Cultural Chatbot (Context Injection & PG Search) | 3 | 3 / 3 | Completed by Client | 🟢 **DELIVERED (BY CLIENT)** |
+| **`FLOW-READER`** | Bilingual Reader & Sticky Audio Player [1x, 0.8x, 0.5x] | 1 | 0 / 1 | Step 1: TASK-004 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
 | **`FLOW-VOCAB-FLASHCARD`**| 1-Click Save with Context & Leitner Flashcards | 1 | 0 / 1 | Step 1: TASK-005 | ⏳ BACKLOG |
 | **`FLOW-GAMIFICATION`** | Daily Streak & Red Seal (Mộc Son Đỏ) Ritual | 1 | 0 / 1 | Step 1: TASK-006 | ⏳ BACKLOG |
 | **`FLOW-BUSINESS`** | Pro Subscription (39k/mo Mock QR & Quota Unlock) | 1 | 0 / 1 | Step 1: TASK-007 | ⏳ BACKLOG |
@@ -19,12 +19,10 @@ This board represents the central state of all work orders organized by **Flows 
 
 ---
 
-## 2. Active Flow: `FLOW-AI-COMPANION` (Priority #1)
+## 2. Active Flow: `FLOW-READER` (Priority #1)
 
 ### Backlog (Pending Execution)
-- 🟢 [TASK-001](backlog/FLOW-AI-COMPANION/TASK-001-backend-companion-chat.md): Implement Backend AI Companion Chat API with Context Injection and PostgreSQL Search (Status: **READY** | Assignee: `backend-dev`)
-- 🔒 [TASK-002](backlog/FLOW-AI-COMPANION/TASK-002-frontend-companion-widget.md): Build Frontend AI Companion Chat Widget and Client Service (Status: **BLOCKED** by TASK-001 | Assignee: `frontend-dev`)
-- 🔒 [TASK-003](backlog/FLOW-AI-COMPANION/TASK-003-e2e-verification-quota.md): End-to-End Functional Verification & Quota Enforcement Testing (Status: **BLOCKED** by TASK-001, TASK-002 | Assignee: `qa-engineer`)
+- 🟢 [TASK-004](backlog/FLOW-READER/TASK-004-reader-audio-pairing.md): Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds (Status: **READY** | Assignee: `frontend-dev`)
 
 ### In Progress (Active Subagents)
 - *None (Awaiting Phase 2 Single Ticket Execution Gate)*
@@ -33,7 +31,7 @@ This board represents the central state of all work orders organized by **Flows 
 - *None*
 
 ### Done (Signed-Off Deliverables)
-- *None (Previous paper QA report archived; actual functional code to be delivered and verified in Phase 2)*
+- `FLOW-AI-COMPANION`: Chatbox completed by Client.
 
 ---
 
