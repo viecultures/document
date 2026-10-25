@@ -39,6 +39,24 @@ Whenever the Client confirms requirements or requests UI/logic adjustments, the 
   - Coordinate with `backend-dev` for Gemini integration and `frontend-dev` for floating chat modal.
 - **Status**: CLOSED
 
+### [ALIGN-003] Bilingual AI Companion and Chat History Persistence Alignment
+- **Date**: 2026-10-25
+- **Participants**: Client (User), Business Analyst (BA)
+- **Discussion Summary**:
+  - Client requested expanding AI Companion capabilities with:
+    1. Bilingual conversational modes ('vi', 'en', 'bilingual') to support diverse learner segments.
+    2. Contextual inline translation for messages preserving Vietnamese culinary and cultural depth.
+    3. Multi-tier chat history persistence: localStorage for guest users (up to 3 daily turns), and PostgreSQL sync for authenticated users with cross-device retrieval and privacy-first deletion.
+  - BA formalized the conversational lifecycles, Given-When-Then acceptance criteria, API contracts (5 endpoints), database persistence schema, and security isolation rules.
+- **Specification Updates**:
+  - Updated `document/03_domain_ai_companion/conversational_flows.md` with bilingual state transitions, inline translation sequence diagram, session persistence lifecycles, and acceptance criteria.
+  - Updated `document/03_domain_ai_companion/context_retrieval_chat.md` with comprehensive API contracts for `/chat`, `/translate`, `/history` (GET, POST, DELETE), database schema (`companion_chat_sessions`, `companion_chat_messages`), security rules, and Gemini prompts.
+- **Action Items for PM**:
+  - [ ] Create backlog ticket `TASK-COMPANION-003`: Backend Chat History Persistence & Translation API implementation.
+  - [ ] Create backlog ticket `TASK-COMPANION-004`: Frontend Chatbox UI Bilingual switcher, inline translate button, and session sync.
+  - [ ] Update `docs/tasks/BOARD.md` to reflect backlog priorities.
+- **Status**: CLOSED
+
 <!-- Template for future alignment entries:
 ### [ALIGN-xxx] Title of Discussion or Change Request
 - **Date**: YYYY-MM-DD
