@@ -5,7 +5,7 @@ flow: FLOW-BACKEND-PERSISTENCE
 step_in_flow: Step 1 of 2 (Community UGC Persistence)
 assigned_to: backend-dev
 reviewer: tech-lead
-status: READY
+status: IN_PROGRESS
 created_at: 2026-10-26
 updated_at: 2026-10-26
 inputs:

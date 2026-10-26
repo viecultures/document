@@ -23,11 +23,10 @@ This board represents the central state of all work orders organized by **Flows 
 ## 2. Active Flow: `FLOW-BACKEND-PERSISTENCE` (Priority #1)
 
 ### Backlog (Pending Execution)
-- 🔴 [TASK-009](backlog/FLOW-BACKEND-PERSISTENCE/TASK-009-community-reflections-persistence.md): Community Reflections REST API and PostgreSQL Persistence (Status: **READY** | Assignee: `backend-dev`)
 - 🔴 [TASK-010](backlog/FLOW-BACKEND-PERSISTENCE/TASK-010-gamification-streak-seal-persistence.md): Gamification Streak and Cultural Red Seal REST API Persistence (Status: **READY** | Assignee: `backend-dev`)
 
 ### In Progress (Active Subagents)
-- *None (Awaiting Single Ticket Execution Gate)*
+- 🟡 [TASK-009](in-progress/TASK-009-community-reflections-persistence.md): Community Reflections REST API and PostgreSQL Persistence (Status: **IN_PROGRESS** | Assignee: `backend-dev`)
 
 ### In Review (Awaiting Review & Sign-Off)
 - *None*
@@ -46,7 +45,7 @@ This board represents the central state of all work orders organized by **Flows 
 
 | Task ID | Target Flow | Title | Assignee | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| [TASK-009](backlog/FLOW-BACKEND-PERSISTENCE/TASK-009-community-reflections-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Community Reflections REST API and PostgreSQL Persistence | `backend-dev` | READY |
+| [TASK-009](in-progress/TASK-009-community-reflections-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Community Reflections REST API and PostgreSQL Persistence | `backend-dev` | IN_PROGRESS |
 | [TASK-010](backlog/FLOW-BACKEND-PERSISTENCE/TASK-010-gamification-streak-seal-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Gamification Streak and Cultural Red Seal REST API Persistence | `backend-dev` | READY |
 | [TASK-004](done/TASK-004-reader-audio-pairing.md) | `FLOW-READER` | Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds | `frontend-dev` | DONE |
 | [TASK-005](done/TASK-005-vocab-context-flashcard.md) | `FLOW-VOCAB-FLASHCARD` | 1-Click Save with Context Sentence and Leitner Binary Flashcards | `frontend-dev` | DONE |
