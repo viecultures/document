@@ -5,7 +5,7 @@ flow: FLOW-BACKEND-PERSISTENCE
 step_in_flow: Step 2 of 2 (Gamification & Habit Persistence)
 assigned_to: backend-dev
 reviewer: tech-lead
-status: READY
+status: DONE
 created_at: 2026-10-26
 updated_at: 2026-10-26
 inputs:
@@ -29,16 +29,16 @@ dependencies:
 - **Previous Flow**: FLOW-GAMIFICATION (TASK-006)
 
 ## 2. Acceptance Criteria (Product Owner)
-- [ ] Create `UserStreak` entity:
+- [x] Create `UserStreak` entity:
   - Fields: `id`, `user_id`, `streak_days`, `last_active_date` (LocalDate), `streak_protected`, `streak_freeze_count`, `updated_at`.
-- [ ] Create `UserSeal` entity:
+- [x] Create `UserSeal` entity:
   - Fields: `id`, `user_id`, `reading_post_id`, `sealed_at` (LocalDateTime), `words_learned_count`, `source` (reader, flashcards).
-- [ ] Implement `StreakController` endpoints (Strict Auth - Bearer JWT):
+- [x] Implement `StreakController` endpoints (Strict Auth - Bearer JWT):
   - `GET /api/user/streak`: Fetch authenticated user's current streak state and available freeze protections.
   - `POST /api/user/streak/sync`: Evaluate and increment streak daily using calendar day difference logic.
   - `POST /api/user/streak/seal`: Persist Mộc Son Red Seal stamp for completed lesson and trigger streak activation.
-- [ ] Enforce Strict Auth: All streak and seal mutations require authenticated user session.
+- [x] Enforce Strict Auth: All streak and seal mutations require authenticated user session.
 
 ## 3. Technical Constraints (Tech Lead)
-- [ ] Prevent duplicate seal records for the same user, reading post, and calendar day.
-- [ ] Streak calculation must match `streakService.ts` specification (habit_tracking.md).
+- [x] Prevent duplicate seal records for the same user, reading post, and calendar day.
+- [x] Streak calculation must match `streakService.ts` specification (habit_tracking.md).
