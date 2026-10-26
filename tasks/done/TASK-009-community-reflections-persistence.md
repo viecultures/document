@@ -5,7 +5,7 @@ flow: FLOW-BACKEND-PERSISTENCE
 step_in_flow: Step 1 of 2 (Community UGC Persistence)
 assigned_to: backend-dev
 reviewer: tech-lead
-status: IN_PROGRESS
+status: DONE
 created_at: 2026-10-26
 updated_at: 2026-10-26
 inputs:
@@ -28,15 +28,15 @@ dependencies:
 - **Previous Flow**: FLOW-COMMUNITY (TASK-008)
 
 ## 2. Acceptance Criteria (Product Owner)
-- [ ] Implement `UserReflectionController` with REST endpoints:
+- [x] Implement `UserReflectionController` with REST endpoints:
   - `GET /api/reflections?postId={postId}`: Query reflections by post ID (Strict Auth - Bearer JWT).
   - `POST /api/reflections`: Create a reflection linked to authenticated `user_id` and `post_id`.
   - `POST /api/reflections/{id}/react`: Idempotent like/unlike toggle via `user_reflection_reactions` relation table.
   - `POST /api/reflections/{id}/report`: Flag inappropriate reflection for passive moderation.
-- [ ] Enforce Strict Auth: Require valid JWT token in Authorization header for all reflection endpoints.
-- [ ] Enforce No-Judgment Policy: Backend never scores or rejects grammar/spelling errors.
+- [x] Enforce Strict Auth: Require valid JWT token in Authorization header for all reflection endpoints.
+- [x] Enforce No-Judgment Policy: Backend never scores or rejects grammar/spelling errors.
 
 ## 3. Technical Constraints (Tech Lead)
-- [ ] Use `UserReflectionReaction` entity with unique composite constraint on `(user_id, reflection_id)`.
-- [ ] Synchronize `reactions_count` atomically on the parent `UserReflection` record.
-- [ ] Return standardized ApiResponse envelope.
+- [x] Use `UserReflectionReaction` entity with unique composite constraint on `(user_id, reflection_id)`.
+- [x] Synchronize `reactions_count` atomically on the parent `UserReflection` record.
+- [x] Return standardized ApiResponse envelope.

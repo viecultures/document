@@ -10,7 +10,7 @@ This board represents the central state of all work orders organized by **Flows 
 
 | Flow Identifier | Flow Name | Total Tasks | Completed | Active Step | Priority & Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`FLOW-BACKEND-PERSISTENCE`** | Community & Streak REST API & DB Persistence | 2 | 0 / 2 | Step 1: TASK-009 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
+| **`FLOW-BACKEND-PERSISTENCE`** | Community & Streak REST API & DB Persistence | 2 | 1 / 2 | Step 2: TASK-010 | 🔴 **PRIORITY #1 (ACTIVE / READY)** |
 | **`FLOW-AI-COMPANION`** | Cultural Chatbot (Context Injection & PG Search) | 3 | 3 / 3 | Completed by Client | 🟢 **DELIVERED (BY CLIENT)** |
 | **`FLOW-READER`** | Bilingual Reader & Sticky Audio Player [1x, 0.8x, 0.5x] | 1 | 1 / 1 | Completed: TASK-004 | 🟢 **DELIVERED** |
 | **`FLOW-VOCAB-FLASHCARD`**| 1-Click Save with Context & Leitner Flashcards | 1 | 1 / 1 | Completed: TASK-005 | 🟢 **DELIVERED** |
@@ -26,12 +26,13 @@ This board represents the central state of all work orders organized by **Flows 
 - 🔴 [TASK-010](backlog/FLOW-BACKEND-PERSISTENCE/TASK-010-gamification-streak-seal-persistence.md): Gamification Streak and Cultural Red Seal REST API Persistence (Status: **READY** | Assignee: `backend-dev`)
 
 ### In Progress (Active Subagents)
-- 🟡 [TASK-009](in-progress/TASK-009-community-reflections-persistence.md): Community Reflections REST API and PostgreSQL Persistence (Status: **IN_PROGRESS** | Assignee: `backend-dev`)
+- *None (Awaiting Single Ticket Execution Gate)*
 
 ### In Review (Awaiting Review & Sign-Off)
 - *None*
 
 ### Done (Signed-Off Deliverables)
+- 🟢 [TASK-009](done/TASK-009-community-reflections-persistence.md): Community Reflections REST API and PostgreSQL Persistence (Status: **DONE** | Assignee: `backend-dev`)
 - 🟢 [TASK-008](done/TASK-008-community-reflections.md): Non-Judgmental Reflections UGC Feed with Passive Moderation (Status: **DONE** | Assignee: `frontend-dev`)
 - 🟢 [TASK-007](done/TASK-007-pro-checkout-qr.md): Pro Subscription Mock Checkout QR and Unlimited Access Unlock (Status: **DONE** | Assignee: `frontend-dev`)
 - 🟢 [TASK-006](done/TASK-006-gamification-streak-seal.md): Daily Streak Tracking and Red Seal (Mộc Son) Activation Ritual (Status: **DONE** | Assignee: `frontend-dev`)
@@ -45,7 +46,7 @@ This board represents the central state of all work orders organized by **Flows 
 
 | Task ID | Target Flow | Title | Assignee | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| [TASK-009](in-progress/TASK-009-community-reflections-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Community Reflections REST API and PostgreSQL Persistence | `backend-dev` | IN_PROGRESS |
+| [TASK-009](done/TASK-009-community-reflections-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Community Reflections REST API and PostgreSQL Persistence | `backend-dev` | DONE |
 | [TASK-010](backlog/FLOW-BACKEND-PERSISTENCE/TASK-010-gamification-streak-seal-persistence.md) | `FLOW-BACKEND-PERSISTENCE` | Gamification Streak and Cultural Red Seal REST API Persistence | `backend-dev` | READY |
 | [TASK-004](done/TASK-004-reader-audio-pairing.md) | `FLOW-READER` | Bilingual Reader Paragraph Pairing and Sticky Audio Player Speeds | `frontend-dev` | DONE |
 | [TASK-005](done/TASK-005-vocab-context-flashcard.md) | `FLOW-VOCAB-FLASHCARD` | 1-Click Save with Context Sentence and Leitner Binary Flashcards | `frontend-dev` | DONE |
